@@ -31,7 +31,7 @@ UNANSWERABLE = [
 
 
 # Independent test set written 2026-11-14 AFTER configs/selected.json was frozen and committed
-# (commit a24c576). Pages were chosen so that none overlaps a dev/test gold page, and no Day 6 /
+# (commit a5076c8). Pages were chosen so that none overlaps a dev/test gold page, and no Day 6 /
 # Day 7 run had looked at them as a target. Run only with the frozen configs.
 TEST2_ANSWERABLE = [
     {"id": "t01", "type": "direct",
