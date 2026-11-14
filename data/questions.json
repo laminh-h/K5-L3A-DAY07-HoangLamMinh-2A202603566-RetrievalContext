@@ -1,0 +1,404 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What was the level of Vietnam's gross international reserves at the end of September 2017?",
+    "expected_answer": "Around US$42 billion, equal to just below three months of imports.",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 29,
+        "evidence": "bringing gross international reserves to around US$ 42 billion"
+      },
+      {
+        "source_id": "ts-2017-12",
+        "page": 11,
+        "evidence": "bringing gross international reserves to around US$42 billion at the end of September"
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "By how much did the State Bank of Vietnam cut its rediscount and refinancing rates in July 2017, and to what levels?",
+    "expected_answer": "By 25 basis points, to 4.25 percent (rediscount) and 6.25 percent (refinancing).",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 22,
+        "evidence": "cutting its rediscount rate and refinancing rate by 25 basis points to 4.25 and 6.25 percent respectively"
+      },
+      {
+        "source_id": "ts-2017-12",
+        "page": 10,
+        "evidence": "cut its rediscount rate and refinancing rate by 25 basis points to 4.25 and 6.25 percent respectively"
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "condition_exception",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "In the first nine months of 2017, what share of total spending did public investment fall to, compared with its 2012-2016 average?",
+    "expected_answer": "16 percent of total spending, compared with an average of 25 percent over 2012-2016.",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 30,
+        "evidence": "declined to 16 percent of total spending in the first nine months of 2017, compared with an average of 25 percent"
+      },
+      {
+        "source_id": "ts-2017-12",
+        "page": 31,
+        "evidence": "declined to 16 percent of total spending in the first nine months of 2017, compared with an average of 25 percent"
+      },
+      {
+        "source_id": "ts-2017-12",
+        "page": 11,
+        "evidence": "declined to 16 percent of total spending in the first nine months of 2017, compared with an average of 25 percent"
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How many additional factory jobs, in net terms, did Vietnam create over the three years leading up to the 2017 report?",
+    "expected_answer": "1.6 million new manufacturing jobs (net).",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 18,
+        "evidence": "Vietnam added 1.6 million new manufacturing jobs (net)"
+      },
+      {
+        "source_id": "ts-2017-12",
+        "page": 11,
+        "evidence": "Vietnam added 1.6 million new manufacturing jobs (net)"
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "condition_exception",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How does Vietnam's ratio of road maintenance to total road expenditure compare with OECD countries?",
+    "expected_answer": "Only 11 percent in Vietnam, versus 30 percent in OECD countries (22 percent in Bangladesh, 37 percent in Indonesia).",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 39,
+        "evidence": "maintenance to total road expenditure ratio in Vietnam is only 11 percent, compared with 22 percent in Bangladesh, 30 percent in OECD countries"
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How did the ratio of central to sub-national capital investment change between 2006-10 and the following period?",
+    "expected_answer": "It moved from 33:67 in 2006-10 to 27:73 in 2011-15.",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 37,
+        "evidence": "central and sub-national total capital investment moved from 33:67 in the period 2006-10 to 27:73"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What portion of direct cash transfers goes to the poorest fifth of households, and to the next poorest fifth?",
+    "expected_answer": "The poorest quintile receives 63 percent of all transfers and the second-poorest quintile 19 percent.",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 54,
+        "evidence": "the poorest quintile receiving 63 percent of all transfers and the second-poorest quintile receiving 19 percent"
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "condition_exception",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "Which type of public transfer is the exception to the pro-poor distribution of cash benefits?",
+    "expected_answer": "Contributory public pensions, which largely go to the better off (the top quintile received close to half of pension income in 2014).",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 54,
+        "evidence": "An exception is contributory public pensions which largely go to the better off."
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How fast did Vietnam's real GDP grow in the first quarter of 2018?",
+    "expected_answer": "Nearly 7.4 percent (y/y), the strongest first-quarter growth in 10 years.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 16,
+        "evidence": "real GDP expanded nearly 7.4 percent (y/y) during the first quarter of 2018"
+      },
+      {
+        "source_id": "ts-2018-06",
+        "page": 9,
+        "evidence": "real GDP expanded nearly 7.4 percent (y/y) during"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What credit growth and inflation targets did the State Bank of Vietnam set for 2018?",
+    "expected_answer": "Credit growth of 17 percent and CPI below 4 percent (also GDP growth 6.7 percent, liquidity growth 16 percent).",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 20,
+        "evidence": "maintaining CPI below 4 percent, reaching a credit growth rate of 17 percent"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How much foreign direct investment was actually disbursed in Vietnam in 2017?",
+    "expected_answer": "A record US$17.5 billion.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 26,
+        "evidence": "foreign investors disbursed a record US$17.5 billion to Vietnam"
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "condition_exception",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How long does documentary compliance for imports take in Vietnam compared with the ASEAN-4 average?",
+    "expected_answer": "76 hours in Vietnam versus 28 hours for the ASEAN-4 average.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 39,
+        "evidence": "documentary compliance (76 hours) is significantly higher than the ASEAN-4 average (28 hours)"
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What proportion of the total cost of importing into Vietnam comes from logistics such as domestic transport and port handling?",
+    "expected_answer": "64 percent of the total cost to import (port handling alone is 39.5 percent).",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 41,
+        "evidence": "logistics costs (domestic transport and port handling) account for 64 percent of the total cost"
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What was Vietnam's total public debt in 2017 as a share of GDP?",
+    "expected_answer": "An estimated 62.6 percent of GDP (up from 50.8 percent in 2012), close to the 65 percent statutory limit.",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 32,
+        "evidence": "from 50.8 percent in 2012 to an estimated 62.6"
+      }
+    ],
+    "filter": {
+      "edition": "2017-12"
+    }
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What record level did Vietnam's foreign reserves reach according to the report?",
+    "expected_answer": "About US$63 billion in the first four months of 2018, around 3.6 months of imports.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 26,
+        "evidence": "record-high foreign reserves of about US$63 billion"
+      }
+    ],
+    "filter": {
+      "edition": "2018-06"
+    }
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "type": "direct",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What was the Vietnam Manufacturing PMI in September 2017?",
+    "expected_answer": "53.3, up from 51.8 in August.",
+    "gold": [
+      {
+        "source_id": "ts-2017-12",
+        "page": 17,
+        "evidence": "rose to 53.3 in September from 51.8 in August"
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "In the 2016 customs survey, what share of declarations went through the green channel?",
+    "expected_answer": "59.8 percent of the total number of declarations.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 46,
+        "evidence": "the green channel accounts for 59.8 percent of the total number of declarations"
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "type": "condition_exception",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "How old is Vietnam's active trucking fleet on average, compared with countries such as Australia or Japan?",
+    "expected_answer": "17 years on average, versus 14 years in Australia and 9 years in Canada and Japan.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 50,
+        "evidence": "active trucking fleet is 17 years, much greater than 14 years in Australia, 9 years in Canada and Japan"
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What was Vietnam's overall fiscal deficit in 2017 as a percentage of GDP?",
+    "expected_answer": "An estimated 4.5 percent of GDP in 2017 (from 4.8 percent in 2016), IMF GFS definition.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 28,
+        "evidence": "an estimated 4.5 percent of GDP in 2017 from 4.8 percent in 2016"
+      }
+    ],
+    "filter": {
+      "edition": "2018-06"
+    }
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "type": "metadata_filter",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "question": "What real GDP growth rate does the World Bank project for Vietnam in 2018?",
+    "expected_answer": "6.8 percent in 2018 (revised up from 6.5 percent), then 6.6 percent in 2019 and 6.5 percent in 2020.",
+    "gold": [
+      {
+        "source_id": "ts-2018-06",
+        "page": 31,
+        "evidence": "real GDP now projected to expand by 6.8 percent in 2018"
+      }
+    ],
+    "filter": {
+      "edition": "2018-06"
+    }
+  },
+  {
+    "id": "u01",
+    "split": "dev",
+    "question": "What was Vietnam's official unemployment rate in 2017?",
+    "absence_reason": "Both reports discuss job creation, wages and labor demand but never state an unemployment rate.",
+    "absence_check": "Regex 'unemployment rate|jobless' over all 618 chunks: 0 matches; 'unemploy' only appears as a chart legend for unemployment benefits (2017-12 p54-55).",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "u02",
+    "split": "dev",
+    "question": "What sovereign credit rating did Moody's or Fitch assign to Vietnam in 2018?",
+    "absence_reason": "Reports cover public debt and bond yields but no rating agency action.",
+    "absence_check": "Regex 'credit rating|sovereign rating|Moody|Fitch' over all chunks: 0 matches ('S&P' only as 'S&P 500' chart legend).",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "u03",
+    "split": "test",
+    "question": "What regional minimum wage did Vietnam set for 2018?",
+    "absence_reason": "Reports describe average nominal/real wage growth, not the statutory minimum wage.",
+    "absence_check": "Regex 'minimum wage' over all chunks: 0 matches; 'wage' passages (2017-12 p19, 2018-06 p18) are averages.",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "u04",
+    "split": "test",
+    "question": "By what percentage did Vietnam raise the retail electricity tariff in 2017?",
+    "absence_reason": "'Electricity' only appears in Doing Business 'Getting Electricity' reform text; no retail tariff change is reported.",
+    "absence_check": "Regex 'electricity' over all chunks: 8 matches, all Doing Business indicators (2017-12 p33); 'tariff' matches concern trade tariffs.",
+    "type": "unanswerable",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  }
+]

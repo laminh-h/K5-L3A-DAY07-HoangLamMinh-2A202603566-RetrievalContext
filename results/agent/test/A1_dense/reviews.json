@@ -1,0 +1,61 @@
+[
+  {
+    "query_id": "q16",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "53.3 in September (2017-12 p17 c06 states it; \"from 51.8 in August\" omitted but not asked).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q17",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "59.8% of declarations, 2016 customs survey (2018-06 p46).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "17 years vs 14 (Australia), 9 (Japan) - matches p50 c02.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q19",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "-4.5% of GDP in 2017e (GFS) read correctly from the 2018-06 p10 indicator table (column 2017e); same value as gold p28. Gold list was incomplete (p10 table not listed) -> auto metric false negative.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q20",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "6.8% in 2018 from 2018-06 p10 c00 (\"Real GDP is now projected to expand by 6.8 percent in 2018\"), same sentence as gold p31. Auto false negative.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "u03",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "Abstained after 4 searches; states the reports lack the figure, no unsupported claim (verified: regex absence check in data/questions.json).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "u04",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "Abstained after 4 searches; states the reports lack the figure, no unsupported claim (verified: regex absence check in data/questions.json).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  }
+]

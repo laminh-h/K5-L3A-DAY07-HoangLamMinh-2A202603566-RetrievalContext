@@ -1,0 +1,31 @@
+{
+  "_note": "Agent configs. Model: Gemini (GEMINI_MODEL, temperature 0, thinking budget 0). budget_chars counts chars of every chunk shown to the model incl. header.",
+  "configs": {
+    "A1_dense": {
+      "method": "dense",
+      "top_k": 3,
+      "budget_chars": 6000,
+      "max_searches": 4,
+      "adjacent_tool": false,
+      "hypothesis": "Baseline agent: one dense search tool over Day 6 Chroma (= R1), model may re-search up to 4 times."
+    },
+    "A2_hybrid_rerank_adj": {
+      "method": "hybrid+rerank",
+      "top_k": 3,
+      "budget_chars": 6000,
+      "max_searches": 4,
+      "adjacent_tool": true,
+      "hypothesis": "Best dev retriever (R4: hybrid RRF + cross-encoder) plus a get_adjacent_chunks tool so the model can repair 500-char windows that cut claims (q08/q10)."
+    },
+    "A3_hybrid_rerank_adj_steps": {
+      "method": "hybrid+rerank",
+      "top_k": 3,
+      "budget_chars": 6000,
+      "max_searches": 4,
+      "adjacent_tool": true,
+      "max_adjacent": 2,
+      "max_steps": 9,
+      "hypothesis": "Dev error A2/q13: get_adjacent_chunks consumed the shared 7-step budget and the run ended in step_limit although the evidence was already in context. Cap adjacent calls at 2 and give 9 steps (4 search + 2 adjacent + final + slack) -> no step_limit abstentions, same retrieval."
+    }
+  }
+}

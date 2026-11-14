@@ -1,5 +1,48 @@
 # Day 7 — Agentic RAG
 
+## Bài làm — Hoàng Lam Minh (2A202603566)
+
+Agent Gemini (`gemini-3.5-flash-lite`, function calling) tìm bằng chứng trong kho Day 6: 2 báo cáo World Bank *Taking Stock* 12/2017 và 06/2018 (CC BY 3.0 IGO), 618 chunk, Chroma, MiniLM 384 chiều. Agent trả lời kèm citation hoặc từ chối.
+
+- 4 phương pháp retrieval: dense trên Chroma Day 6, BM25, hybrid RRF, hybrid + cross-encoder rerank.
+- Benchmark 24 câu: dev 15+2, test 5+2.
+- Báo cáo: [report/individual/2A202603566_HoangLamMinh.md](report/individual/2A202603566_HoangLamMinh.md).
+
+**Ghi nguồn dữ liệu:** World Bank. 2017. *Taking Stock, December 2017* (https://hdl.handle.net/10986/29032) và World Bank. 2018. *Taking Stock, June 2018* (https://hdl.handle.net/10986/29959). License: CC BY 3.0 IGO. `data/chunks.json` là text trích xuất đã chuẩn hóa từ Day 6, không phải bản chính thức của World Bank.
+
+### Cài đặt
+
+1. Cần repo Day 6 (https://github.com/laminh-h/K5-L3A-DAY06-HoangLamMinh-2A202603566-DataIngestion), clone cạnh repo này. Kho Chroma `starter/chroma_db` **không** nằm trong git, nên phải tạo lại: trong `starter/` của Day 6, cài `requirements.txt` vào `.venv`, rồi chạy `python -m src.run ingest` (PDF đã có sẵn trong `data/raw/`; Day 6 tạo index A/B với cùng ID, vì vậy `day7.export_day6` sẽ cho đúng 618 chunk). Nếu Day 6 đặt chỗ khác, khai báo đường dẫn bằng biến `DAY6_ROOT`.
+2. Dùng venv của Day 6 (đã có chromadb, sentence-transformers và `requests`). Không cần cài thêm gì.
+3. `cp .env.example .env`, rồi điền `GEMINI_API_KEY` (lấy key free ở https://aistudio.google.com/apikey). Không commit `.env`.
+
+### Chạy (từ thư mục gốc repo này)
+
+```bash
+PY=../K5-L3A-DAY06-HoangLamMinh-2A202603566-DataIngestion/starter/.venv/Scripts/python.exe   # Linux/macOS: .venv/bin/python
+$PY -X utf8 -m unittest discover -s tests                 # 23 test offline (mock; không phải benchmark)
+$PY -X utf8 -m day7.export_day6                           # Chroma Day 6 -> data/chunks.json
+$PY -X utf8 -m day7.build_benchmark                       # data/questions.json, data/cases.json
+$PY -X utf8 -m day7.eval_retrieval --split dev            # R1..R6 -> results/retrieval/dev/
+$PY -X utf8 -m day7.run_agent_bench --config A1_dense --split dev    # cũng: A2_hybrid_rerank_adj, A3_hybrid_rerank_adj_steps
+$PY -X utf8 -m day7.review_sheet --split dev --config A1_dense       # bảng đọc để chấm tay
+# sau khi chốt configs/selected.json:
+$PY -X utf8 -m day7.eval_retrieval --split test           # chỉ cho phép R1 và R4
+$PY -X utf8 -m day7.run_agent_bench --config A3_hybrid_rerank_adj_steps --split test
+$PY -X utf8 starter/agent_metrics.py --cases data/cases.json --traces results/agent/test/A3_hybrid_rerank_adj_steps/traces.json --reviews results/agent/test/A3_hybrid_rerank_adj_steps/reviews.json --split test --output results/agent/test/A3_hybrid_rerank_adj_steps/summary.json
+```
+
+| Đường dẫn | Nội dung |
+|---|---|
+| `day7/` | config (kết nối Day 6), retrievers, context, gemini client, agent, các script benchmark |
+| `configs/` | `retrieval.json` (R1–R6), `agent.json` (A1–A3), `selected.json` (cấu hình chốt trước test) |
+| `data/` | chunks, questions (gold + `absence_check`), cases, báo cáo build benchmark |
+| `results/retrieval/<split>/` | metric và trace top-10 cho từng cấu hình |
+| `results/agent/<split>/<config>/` | `traces.json`, `auto_summary.json`, `review_sheet.md`, `reviews.json`, `summary.json` |
+| `results/logs/` | log chạy agent |
+
+---
+
 **Bài cá nhân · Python 3.11+ · tiếp nối Day 6**
 
 Dùng embedding và vector store từ Day 6 để xây một agent biết tìm bằng chứng, trả lời có nguồn và nhận biết khi không đủ thông tin. Bạn tự chọn kiến trúc, số tool và cách tổ chức retrieval.

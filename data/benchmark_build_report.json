@@ -1,0 +1,13 @@
+{
+  "dropped_gold_alternatives": [],
+  "counts": {
+    "dev": {
+      "answerable": 15,
+      "unanswerable": 2
+    },
+    "test": {
+      "answerable": 5,
+      "unanswerable": 2
+    }
+  }
+}

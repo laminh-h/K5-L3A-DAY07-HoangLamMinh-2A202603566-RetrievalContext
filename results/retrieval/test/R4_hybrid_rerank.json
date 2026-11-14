@@ -1,0 +1,564 @@
+{
+  "config": "R4_hybrid_rerank",
+  "method": "hybrid+rerank",
+  "use_filter": true,
+  "context_k": 3,
+  "budget_chars": 2400,
+  "neighbor_window": 0,
+  "hypothesis": "A cross-encoder reading query and chunk jointly fixes ranking errors where the topic sentence outranks the chunk with the number (Day 6 q08, q20).",
+  "N": 5,
+  "hit_at_1": "3/5",
+  "evidence_hit_at_3": "4/5",
+  "mrr_at_10": 0.74,
+  "recall_at_10": "5/5",
+  "context_evidence_rate": "4/5",
+  "avg_context_chars": 1642,
+  "retrieval_latency_ms_per_query": 713.5,
+  "cost_usd": 0.0,
+  "traces": [
+    {
+      "query_id": "q16",
+      "question": "What was the Vietnam Manufacturing PMI in September 2017?",
+      "filter": null,
+      "latency_s": 0.6962,
+      "first_hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p017:c05",
+        "A:ts-2017-12:p017:c06",
+        "A:ts-2017-12:p017:c02"
+      ],
+      "context_chars": 1430,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p017:c05",
+          "score": 5.858778,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ction expanded by 8.6 percent (y/y) during the first ten months of 2017- much higher than the same period last year (7.3 percent). Strong performance in manufacturing sector, which grew 13.6 percent, compensated the decline in mining sector"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p017:c06",
+          "score": 0.671021,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "s' Index (PMI) rose to 53.3 in September from 51.8 in August (the strongest performance since March 2017), marking the 22 consecutive months of strengthening and signaling sustained improvement in business conditions."
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p017:c02",
+          "score": -0.657444,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": ". Recent Economic Developments in Vietnam Aided by favorable external and domestic conditions, Vietnam's economy gathered momentum 1.4. Vietnam's economy gathered further momentum in 2017 reflecting strong domestic demand, robust export-ori"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p010:c07",
+          "score": -0.895096,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ar. Import growth also rebounded in 2017, driven by a surge in imports of capital and intermediate goods, which in turn reflect buoyant investment and high import content, especially of Vietnam's manufacturing exports. The current account p"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p016:c04",
+          "score": -1.197129,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "r of Vietnam GDP growth over the past five years. Over the past five years manufacturing output expanded at average 10.3 percent, annually, and an estimated 1.5 million new manufacturing jobs were added between 2014-16 alone, driven in larg"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p017:c08",
+          "score": -1.400988,
+          "page": 17,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Mishra and Viet Tuan Dinh (2018): \"Vietnam's Manufacturing Miracle - Lessons for Developing Countries\". Published on Brookings Institution Future Development Blog. Made in Vietnam Vietnam China Korea India Bangladesh Ethiopia Ln(GDP per cap"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p016:c00",
+          "score": -1.731685,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Recent Economic Developments in Vietnam Coming off strong momentum in 2017, growth accelerated further in the first quarter of 2018 4. Propelled by favorable domestic and external factors, Vietnam's economy posted its strongest first-quarte"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p010:c06",
+          "score": -1.768762,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "th. Vietnam's balance of payments remains in surplus, underpinned by a trade surplus, resilient remittances, and large FDi inflows. Improved external demand helped lift Vietnam's already strong export performance. Underpinned by broad-based"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p016:c00",
+          "score": -2.135885,
+          "page": 16,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Figure 1.1: global gDP growth (%) Figure 1.2: Manufacturing PMi 1.2. Developing East asia and the Pacific also continued to perform well in the first half of 2017. The region grew more rapidly than almost all other developing regions. Overa"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p009:c03",
+          "score": -2.311021,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " growth, driven by a FDI and private-sector-led recovery in investment and an ongoing shift of labor from agriculture into more productive manufacturing and service sectors. Vietnam's external position continued to improve owing to strong t"
+        }
+      ]
+    },
+    {
+      "query_id": "q17",
+      "question": "In the 2016 customs survey, what share of declarations went through the green channel?",
+      "filter": null,
+      "latency_s": 0.7393,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p046:c00",
+        "A:ts-2018-06:p046:c01",
+        "A:ts-2017-12:p024:c02"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p046:c00",
+          "score": 5.263051,
+          "page": 46,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "27. Customs is responsible for the last intervention for goods clearance at border. However, compliance costs depend not only on Customs, but also on specialized agencies before and at the border. Figure 14. Goods Cleared by Type of Channel"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p046:c01",
+          "score": -6.129434,
+          "page": 46,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ations. Too many changeable legal documents guiding specialized controls potentially lead to high chance of irregularities. The yellow channel accounts for 34.8 percent, which specifies too many cases of specialized inspections. Despite tha"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p024:c02",
+          "score": -9.574585,
+          "page": 24,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " 64.5 11.5 20.4 Source: General Department of Customs. 1.18. Despite improved export performance of the domestic sector in 2017, exports continue to be dominated by the FDi sector. Vietnam's exports continue to gain global market share, in "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p025:c00",
+          "score": -9.773327,
+          "page": 25,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Box 1: constraints to backward linkages from FDi in Vietnam The latest Vietnam Enterprise Survey 2016 covers several aspects of business environment along with measures of firm performance. The findings help identify some of the characteris"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p057:c00",
+          "score": -10.371057,
+          "page": 57,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "51. Many other indicators in the LPI survey's domestic section can be used for policy analysis and for monitoring trade facilitation and logistics reform implementation. For example, Figure 26 presents the feedback of the LPI survey's respo"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p041:c06",
+          "score": -10.520531,
+          "page": 41,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " Customs Non -Customs Port Handling Border Compliance Documentary Compliance Domestic Tranport Source: Doing Business, World Bank (2018)."
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p054:c02",
+          "score": -10.578549,
+          "page": 54,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "to monitor results achieved in meeting this objective. Figure 23 shows the trade competitiveness gap between Vietnam and the ASEAN-4 average during for the Doing Business reports from 2016 through 2018. Over this period, there has been a de"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p054:c03",
+          "score": -10.667692,
+          "page": 54,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "dicators are significantly different: while the time for border compliance in Vietnam is reached the ASEAN-4 average level, there remains a considerable gap in the time for documentary compliance on specialized controls between Vietnam and "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p046:c05",
+          "score": -10.823198,
+          "page": 46,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ational statistics Clear measures of performance Focus on agency mandate Focus on trade supply chain needs Government always right Capacity to challenge decisions Green (Immediate Release with Payment), Yellow (Documentary Examination), Red"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p031:c02",
+          "score": -11.021374,
+          "page": 31,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ource: MOF . Source: MOF . 9M-2016 9M-2017 Change (y/y, %) VAT CIT PIT Trade tax Excise tax Nat. resources tax Env. protection tax 2007 2009 2011 2013 2015 9M-17 Share of CIT/ total taxes (%) Share of CIT/ total revenue (%) Trillion dong 9M"
+        }
+      ]
+    },
+    {
+      "query_id": "q18",
+      "question": "How old is Vietnam's active trucking fleet on average, compared with countries such as Australia or Japan?",
+      "filter": null,
+      "latency_s": 0.6743,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p050:c02",
+        "A:ts-2018-06:p055:c03",
+        "A:ts-2018-06:p036:c07"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p050:c02",
+          "score": 8.952225,
+          "page": 50,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "argest asset-based LSP , faces a significant efficiency gap: about 35 percent of truck miles are empty according to a World Bank study in 2010, and the average age of Vietnam's active trucking fleet is 17 years, much greater than 14 years i"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p055:c03",
+          "score": -1.726247,
+          "page": 55,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " to track and trace consignments, and (vi) Timeliness of delivery. 49. Vietnam's performance is slightly below the unweighted ASEAN 4 average (3.13 versus 2.99), and is on par with the East Asia & Pacific regional average 19 (Figure 24). Th"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p036:c07",
+          "score": -3.417755,
+          "page": 36,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " Logistics Performance Index, and it outperforms both its region and income group. However, with a score of 2.98 out of a maximum of 5.0 in 2016, Vietnam still has potential to improve its performance. Countries with better logistics perfor"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p039:c01",
+          "score": -3.826196,
+          "page": 39,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "te. 12. Vietnam's trade competitiveness in terms of time to trade remains behind peer economies in the region, particularly compared with the average of the ASEAN-4 (including Singapore, Malaysia, Thailand, and the Philippines). Figure 3 on"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p033:c00",
+          "score": -3.920424,
+          "page": 33,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "190 countries) in DB2017 and to rank 68 (of 190 countries) in the most recently released DB2018. Nevertheless, Vietnam is still lagging compared to more advanced countries in the region, including Singapore, Malaysia and Thailand. Box 2: si"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p017:c00",
+          "score": -4.645214,
+          "page": 17,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "the age of 35 and Vietnam has large and growing workforce. The country is also politically stable and geographically close to major global supply chains. But this is not necessarily what sets Vietnam apart. Instead, we would argue that Viet"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p027:c04",
+          "score": -4.905109,
+          "page": 27,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " exports. This is followed by the North East Asian markets (Japan, Korea, Taiwan and Hong Kong), EU and ASEAN. Vietnam has successfully maintaining stable market shares for its exports. However, Vietnam's imports are quite concentrated. The"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p046:c04",
+          "score": -5.071763,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " Malaysia Lao PDR Myanmar Singapore Indonesia New Zealand Philippines Australia Cambodia Korea Thailand Japan OECD average China Vietnam % of GDP % of GDP Private Public Total expenditure on pharmaceuticals as a share of GDP (2010) Source: "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p055:c04",
+          "score": -5.297881,
+          "page": 55,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "sments by 1,000 international freight forwarders and express carriers. 19 The East Asia & Pacific regional average only captures developing countries in the region. No rank is indicated in the graph. Border Compliance to Import (Hour) Vietn"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p047:c04",
+          "score": -5.350482,
+          "page": 47,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " four times those of China, six times those of Thailand and three times those of India. Average road transport costs represented by trip time are the highest in the region after Indonesia and hold back Vietnam's competitiveness. This is bec"
+        }
+      ]
+    },
+    {
+      "query_id": "q19",
+      "question": "What was Vietnam's overall fiscal deficit in 2017 as a percentage of GDP?",
+      "filter": {
+        "edition": "2018-06"
+      },
+      "latency_s": 0.6644,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p028:c03",
+        "A:ts-2018-06:p009:c06",
+        "A:ts-2018-06:p025:c02"
+      ],
+      "context_chars": 1641,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p028:c03",
+          "score": 9.983914,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": " MOF , World Bank and IMF . Thanks to a continued adjustment in the fiscal position, public debt stabilized in 2017 22. Vietnam's fiscal stance improved further in 2017. The overall fiscal deficit is estimated to have narrowed to an estimat"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p009:c06",
+          "score": 8.495521,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "liquidity could exacerbate volatility in Vietnam's financial markets, especially against the backdrop of anticipated tightening of global monetary conditions. After public debt stabilized in 2017, maintaining fiscal discipline remains a pri"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p025:c02",
+          "score": 6.62604,
+          "page": 25,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rofits and interest payments associated with Vietnam's dynamic, export oriented FDI sector have steadily grown to US$ 10.8 billion, equivalent to 4.9 percent of GDP in 2017, moving the overall income account into deficit and creating a grow"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p021:c02",
+          "score": 4.981252,
+          "page": 21,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "s, below the estimate of 18.2 percent cumulative credit growth in 2017 (figure 17). Vietnam credit cycle stands out from trends in most other countries of the region, including China, which have seen gradual tightening. Vietnam's overall cr"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p016:c00",
+          "score": 4.595753,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Recent Economic Developments in Vietnam Coming off strong momentum in 2017, growth accelerated further in the first quarter of 2018 4. Propelled by favorable domestic and external factors, Vietnam's economy posted its strongest first-quarte"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p028:c02",
+          "score": 4.189291,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "and Distributional Impacts Comprehensive and Progressive Trans-Pacific Partnership: the case of Vietnam. World Bank Hanoi, March 5, 2018. Figure 27. Fiscal balances (percent of GDP) Figure 28. Public debt (percent of GDP) 2011 2012 2013 201"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p010:c00",
+          "score": 3.830812,
+          "page": 10,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Medium-term outlook, risks, and policy implications Vietnam's medium-term outlook has improved further since the last Taking Stock release in December 2017. Real GDP is now projected to expand by 6.8 percent in 2018 (up from 6.5 percent in "
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p009:c01",
+          "score": 3.433147,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "advanced economies runs its course. Growth in the East Asia and Pacific (EAP) region is expected to moderate slightly to 6.3 percent in 2018 and then 6.1 percent on average in 2019-2020, largely reflecting a continued structural slowdown in"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p016:c04",
+          "score": 3.050248,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "r of Vietnam GDP growth over the past five years. Over the past five years manufacturing output expanded at average 10.3 percent, annually, and an estimated 1.5 million new manufacturing jobs were added between 2014-16 alone, driven in larg"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p026:c02",
+          "score": 2.69567,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "er of 2018, FDI disbursement were sustained at the 7.2 percent growth rate achieved over the same period in 2017. Currently, the foreign-invested sector contributes about a fifth of Vietnam's GDP , 26.5 percent of total investment, 72 perce"
+        }
+      ]
+    },
+    {
+      "query_id": "q20",
+      "question": "What real GDP growth rate does the World Bank project for Vietnam in 2018?",
+      "filter": {
+        "edition": "2018-06"
+      },
+      "latency_s": 0.7931,
+      "first_hit_rank": 5,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "context_evidence": false,
+      "context_ids": [
+        "A:ts-2018-06:p010:c00",
+        "A:ts-2018-06:p016:c00",
+        "A:ts-2018-06:p009:c01"
+      ],
+      "context_chars": 1712,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p010:c00",
+          "score": 6.653897,
+          "page": 10,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Medium-term outlook, risks, and policy implications Vietnam's medium-term outlook has improved further since the last Taking Stock release in December 2017. Real GDP is now projected to expand by 6.8 percent in 2018 (up from 6.5 percent in "
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p016:c00",
+          "score": 6.109828,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Recent Economic Developments in Vietnam Coming off strong momentum in 2017, growth accelerated further in the first quarter of 2018 4. Propelled by favorable domestic and external factors, Vietnam's economy posted its strongest first-quarte"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p009:c01",
+          "score": 5.834148,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "advanced economies runs its course. Growth in the East Asia and Pacific (EAP) region is expected to moderate slightly to 6.3 percent in 2018 and then 6.1 percent on average in 2019-2020, largely reflecting a continued structural slowdown in"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p026:c02",
+          "score": 4.22569,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "er of 2018, FDI disbursement were sustained at the 7.2 percent growth rate achieved over the same period in 2017. Currently, the foreign-invested sector contributes about a fifth of Vietnam's GDP , 26.5 percent of total investment, 72 perce"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p031:c04",
+          "score": 4.1113,
+          "page": 31,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "ain commodities will see a gradual reduction to zero percent by 2022. Source: WTO. Medium-Term Economic Outlook, Risks, Policy Implications 26. Vietnam's medium-term outlook has improved further since the last Taking Stock release in Decemb"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p028:c03",
+          "score": 3.853581,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " MOF , World Bank and IMF . Thanks to a continued adjustment in the fiscal position, public debt stabilized in 2017 22. Vietnam's fiscal stance improved further in 2017. The overall fiscal deficit is estimated to have narrowed to an estimat"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p021:c02",
+          "score": 3.22328,
+          "page": 21,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "s, below the estimate of 18.2 percent cumulative credit growth in 2017 (figure 17). Vietnam credit cycle stands out from trends in most other countries of the region, including China, which have seen gradual tightening. Vietnam's overall cr"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p016:c03",
+          "score": 3.189492,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "g eleven consecutive quarters of negative growth, mining output recovered modestly to 0.4 percent (from 10 percent contraction in Q1 2017), driven by a pick-up in commodity prices. Figure 4. Sectoral GDP growth (y/y, percent) Figure 5. Cont"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p016:c04",
+          "score": 2.495482,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "r of Vietnam GDP growth over the past five years. Over the past five years manufacturing output expanded at average 10.3 percent, annually, and an estimated 1.5 million new manufacturing jobs were added between 2014-16 alone, driven in larg"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p028:c02",
+          "score": 2.365851,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "and Distributional Impacts Comprehensive and Progressive Trans-Pacific Partnership: the case of Vietnam. World Bank Hanoi, March 5, 2018. Figure 27. Fiscal balances (percent of GDP) Figure 28. Public debt (percent of GDP) 2011 2012 2013 201"
+        }
+      ]
+    }
+  ]
+}

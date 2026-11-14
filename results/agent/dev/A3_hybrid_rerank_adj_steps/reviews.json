@@ -1,0 +1,151 @@
+[
+  {
+    "query_id": "q01",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "US$42bn end-Sept 2017 + ~3 months of imports, matches p11 evidence.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q02",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "25 bp to 4.25% / 6.25%, matches p10 evidence.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q03",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "16% vs 25% avg 2012-2016, condition (first nine months) kept.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q04",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "1.6 million net manufacturing jobs, matches p18.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q05",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "11% vs 30% OECD, matches p39 (other comparators omitted but question asks OECD).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q06",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "33:67 (2006-10) -> 27:73 (2011-15); chunk text \"2011- 154\" is 2011-15 + footnote 4.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q07",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "63% poorest / 19% second-poorest, matches p54 c06.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q08",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Contributory public pensions go to the better off, matches p54 c06.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q09",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Nearly 7.4% y/y Q1 2018, matches 2018-06 p16/p9.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q10",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "CPI <4% and credit growth 17%, matches p20 c05.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q11",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Record US$17.5bn in 2017 from 2018-06 p26.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q12",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "76 h vs ASEAN-4 28 h, matches p39.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q13",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "64% of total import cost, matches p41.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q14",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "62.6% of GDP in 2017 (edition 2017-12), matches p32.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "q15",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "About US$63bn, first four months 2018, 3.6 months of imports, matches p26 c05.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "u01",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "Abstained and only stated the reports lack this figure; no unsupported claim.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "u02",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "Abstained and only stated the reports lack this figure; no unsupported claim.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  }
+]

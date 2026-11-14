@@ -1,0 +1,42 @@
+{
+  "config": "A2_hybrid_rerank_adj",
+  "split": "dev",
+  "method": "hybrid+rerank",
+  "top_k": 3,
+  "budget_chars": 6000,
+  "max_searches": 4,
+  "adjacent_tool": true,
+  "hypothesis": "Best dev retriever (R4: hybrid RRF + cross-encoder) plus a get_adjacent_chunks tool so the model can repair 500-char windows that cut claims (q08/q10).",
+  "model": "gemini-3.5-flash-lite",
+  "N": 17,
+  "status": {
+    "answered": 14,
+    "abstain": 3
+  },
+  "provider_errors": 0,
+  "tool_use": "17/17",
+  "searches_distribution": {
+    "1": 6,
+    "2": 2,
+    "4": 5,
+    "5": 1,
+    "6": 3
+  },
+  "llm_calls_distribution": {
+    "2": 6,
+    "3": 2,
+    "5": 5,
+    "6": 1,
+    "7": 3
+  },
+  "context_evidence_rate": "15/15",
+  "first_search_hit_at_3": "14/15",
+  "auto_cited_gold_chunk": "14/15",
+  "abstained_unanswerable": "2/2",
+  "abstained_answerable": "1/15",
+  "avg_context_chars": 3004,
+  "avg_latency_s": 26.5,
+  "tokens_in": 88742,
+  "tokens_out": 3092,
+  "est_cost_usd_list_price": 0.03435
+}

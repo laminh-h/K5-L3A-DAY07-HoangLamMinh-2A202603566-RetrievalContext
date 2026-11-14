@@ -1,0 +1,1904 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "answerable": true,
+    "question": "What was the level of Vietnam's gross international reserves at the end of September 2017?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "At the end of September 2017, Vietnam's gross international reserves reached around US$42 billion (equal to just below three months of imports).",
+    "citations": [
+      "A:ts-2017-12:p011:c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "gross international reserves end of September 2017",
+        "filter": null,
+        "latency_s": 1.849,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p011:c01",
+            "score": 6.942801
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p029:c03",
+            "score": 4.609154
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p027:c00",
+            "score": -2.696597
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "gross international reserves US$ 42 billion end of September 2017",
+        "filter": null,
+        "latency_s": 0.8,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p011:c01",
+            "score": 8.328972
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p029:c03",
+            "score": 6.08411
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p027:c00",
+            "score": -1.254425
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p011:c01"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p011:c01",
+      "A:ts-2017-12:p029:c03",
+      "A:ts-2018-06:p027:c00"
+    ],
+    "context_chars": 1686,
+    "llm_calls": 3,
+    "searches": 2,
+    "tokens_in": 2905,
+    "tokens_out": 138,
+    "cost_usd": 0.001216,
+    "latency_s": 15.13,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "answerable": true,
+    "question": "By how much did the State Bank of Vietnam cut its rediscount and refinancing rates in July 2017, and to what levels?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "In July 2017, the State Bank of Vietnam cut its rediscount rate and refinancing rate by 25 basis points to 4.25 percent and 6.25 percent respectively.",
+    "citations": [
+      "A:ts-2017-12:p010:c04"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "State Bank of Vietnam cut rediscount refinancing rates July 2017",
+        "filter": null,
+        "latency_s": 0.802,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p010:c04",
+            "score": 9.325102
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p022:c01",
+            "score": 7.906779
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p021:c00",
+            "score": -1.142276
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p010:c04",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p010:c03"
+          },
+          {
+            "id": "A:ts-2017-12:p010:c05"
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p010:c04"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p010:c04",
+      "A:ts-2017-12:p022:c01",
+      "A:ts-2018-06:p021:c00",
+      "A:ts-2017-12:p010:c03",
+      "A:ts-2017-12:p010:c05"
+    ],
+    "context_chars": 2855,
+    "llm_calls": 3,
+    "searches": 2,
+    "tokens_in": 3101,
+    "tokens_out": 158,
+    "cost_usd": 0.001325,
+    "latency_s": 19.15,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "answerable": true,
+    "question": "In the first nine months of 2017, what share of total spending did public investment fall to, compared with its 2012-2016 average?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "In the first nine months of 2017, the share of investment spending in total expenditure declined to 16 percent, compared with an average of 25 percent over 2012-2016.",
+    "citations": [
+      "A:ts-2017-12:p031:c03"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "public investment share total spending first nine months 2017 2012-2016",
+        "filter": null,
+        "latency_s": 0.641,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p031:c03",
+            "score": 9.217724
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p030:c02",
+            "score": 6.369097
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p030:c03",
+            "score": 6.239837
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p031:c03"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p031:c03",
+      "A:ts-2017-12:p030:c02",
+      "A:ts-2017-12:p030:c03"
+    ],
+    "context_chars": 1711,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1700,
+    "tokens_out": 132,
+    "cost_usd": 0.00084,
+    "latency_s": 12.61,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "answerable": true,
+    "question": "How many additional factory jobs, in net terms, did Vietnam create over the three years leading up to the 2017 report?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "Over the three years leading up to the 2017 report, Vietnam added 1.6 million new manufacturing jobs (net).",
+    "citations": [
+      "A:ts-2017-12:p018:c02"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "additional factory jobs net terms three years leading up to the 2017 report",
+        "filter": null,
+        "latency_s": 0.817,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p018:c02",
+            "score": 0.698047
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p016:c04",
+            "score": -1.850823
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p018:c00",
+            "score": -2.124182
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p018:c02"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p018:c02",
+      "A:ts-2018-06:p016:c04",
+      "A:ts-2018-06:p018:c00"
+    ],
+    "context_chars": 1713,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1623,
+    "tokens_out": 106,
+    "cost_usd": 0.000752,
+    "latency_s": 13.21,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "answerable": true,
+    "question": "How does Vietnam's ratio of road maintenance to total road expenditure compare with OECD countries?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "In Vietnam, the maintenance to total road expenditure ratio in the roads subsector is 11 percent, whereas it is 30 percent in OECD countries.",
+    "citations": [
+      "A:ts-2017-12:p039:c04"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "road maintenance total road expenditure OECD",
+        "filter": null,
+        "latency_s": 0.614,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p039:c04",
+            "score": 7.199349
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p040:c01",
+            "score": 6.305727
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p046:c04",
+            "score": 1.963789
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p039:c04"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p039:c04",
+      "A:ts-2017-12:p040:c01",
+      "A:ts-2017-12:p046:c04"
+    ],
+    "context_chars": 1713,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1598,
+    "tokens_out": 99,
+    "cost_usd": 0.000727,
+    "latency_s": 12.98,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "answerable": true,
+    "question": "How did the ratio of central to sub-national capital investment change between 2006-10 and the following period?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "The proportion of central and sub-national total capital investment moved from 33:67 in the period 2006-10 to 27:73 in the following period of 2011-15.",
+    "citations": [
+      "A:ts-2017-12:p037:c04",
+      "A:ts-2017-12:p037:c05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "central to sub-national capital investment",
+        "filter": null,
+        "latency_s": 0.701,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p037:c05",
+            "score": 6.214102
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p037:c04",
+            "score": 3.942892
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p038:c01",
+            "score": 2.597081
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p037:c04",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p037:c03"
+          },
+          {
+            "id": "A:ts-2017-12:p037:c05"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p037:c05",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p037:c04"
+          },
+          {
+            "id": "A:ts-2017-12:p037:c06"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "proportion of central and sub-national total capital investment",
+        "filter": null,
+        "latency_s": 0.676,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p037:c04",
+            "score": 8.290591
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p037:c06",
+            "score": 3.656754
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p037:c05",
+            "score": 2.191988
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "33:67",
+        "filter": null,
+        "latency_s": 0.957,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p037:c04",
+            "score": -0.262064
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p048:c04",
+            "score": -6.280313
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p056:c08",
+            "score": -6.725581
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p037:c04",
+          "A:ts-2017-12:p037:c05"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p037:c05",
+      "A:ts-2017-12:p037:c04",
+      "A:ts-2017-12:p038:c01",
+      "A:ts-2017-12:p037:c03",
+      "A:ts-2017-12:p037:c06",
+      "A:ts-2018-06:p048:c04",
+      "A:ts-2017-12:p056:c08"
+    ],
+    "context_chars": 3578,
+    "llm_calls": 6,
+    "searches": 5,
+    "tokens_in": 8217,
+    "tokens_out": 265,
+    "cost_usd": 0.003128,
+    "latency_s": 39.03,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "answerable": true,
+    "question": "What portion of direct cash transfers goes to the poorest fifth of households, and to the next poorest fifth?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "The poorest quintile (poorest fifth of households) receives 63 percent of all direct cash transfers, and the second-poorest quintile receives 19 percent [A:ts-2017-12:p054:c06].",
+    "citations": [
+      "A:ts-2017-12:p054:c06"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "direct cash transfers poorest fifth quintile",
+        "filter": null,
+        "latency_s": 0.648,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p054:c05",
+            "score": 5.378893
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p054:c00",
+            "score": 4.780596
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p054:c06",
+            "score": 4.626105
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p054:c06",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p054:c05"
+          },
+          {
+            "id": "A:ts-2017-12:p054:c07"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "poorest quintile receiving 63 percent",
+        "filter": null,
+        "latency_s": 0.793,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p054:c06",
+            "score": 7.942557
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p058:c03",
+            "score": 1.939168
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p058:c06",
+            "score": 0.87835
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p054:c05",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p054:c04"
+          },
+          {
+            "id": "A:ts-2017-12:p054:c06"
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p054:c06"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p054:c05",
+      "A:ts-2017-12:p054:c00",
+      "A:ts-2017-12:p054:c06",
+      "A:ts-2017-12:p054:c07",
+      "A:ts-2017-12:p058:c03",
+      "A:ts-2017-12:p058:c06",
+      "A:ts-2017-12:p054:c04"
+    ],
+    "context_chars": 3426,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 6200,
+    "tokens_out": 227,
+    "cost_usd": 0.002427,
+    "latency_s": 32.37,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which type of public transfer is the exception to the pro-poor distribution of cash benefits?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "Contributory public pensions are the exception to the pro-poor distribution of cash benefits, as they largely go to the better off (with the top quintile receiving close to half of the total pension income available in 2014) [A:ts-2017-12:p054:c06].",
+    "citations": [
+      "A:ts-2017-12:p054:c06"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "public transfer pro-poor distribution cash benefits exception",
+        "filter": null,
+        "latency_s": 0.507,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p054:c05",
+            "score": 1.598684
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p054:c06",
+            "score": 0.247408
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p054:c00",
+            "score": -0.94008
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p054:c06"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p054:c05",
+      "A:ts-2017-12:p054:c06",
+      "A:ts-2017-12:p054:c00"
+    ],
+    "context_chars": 1713,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1634,
+    "tokens_out": 141,
+    "cost_usd": 0.000843,
+    "latency_s": 13.11,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "answerable": true,
+    "question": "How fast did Vietnam's real GDP grow in the first quarter of 2018?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "In the first quarter of 2018, Vietnam's real GDP expanded nearly 7.4 percent (y/y), which was its strongest first-quarter growth in 10 years (or a decade).",
+    "citations": [
+      "A:ts-2018-06:p016:c00",
+      "A:ts-2018-06:p009:c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "real GDP grow first quarter 2018 Vietnam",
+        "filter": null,
+        "latency_s": 0.442,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p016:c00",
+            "score": 9.652554
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p009:c01",
+            "score": 8.607312
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p010:c00",
+            "score": 5.939844
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p016:c00",
+          "A:ts-2018-06:p009:c01"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p016:c00",
+      "A:ts-2018-06:p009:c01",
+      "A:ts-2018-06:p010:c00"
+    ],
+    "context_chars": 1712,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1691,
+    "tokens_out": 141,
+    "cost_usd": 0.00086,
+    "latency_s": 12.57,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "answerable": true,
+    "question": "What credit growth and inflation targets did the State Bank of Vietnam set for 2018?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "The State Bank of Vietnam set monetary policy targets for 2018 that included reaching a credit growth rate of 17 percent and maintaining CPI (inflation) below 4 percent [A:ts-2018-06:p020:c05].",
+    "citations": [
+      "A:ts-2018-06:p020:c05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "State Bank of Vietnam credit growth inflation targets 2018",
+        "filter": null,
+        "latency_s": 0.53,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p010:c04",
+            "score": 6.956071
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p022:c01",
+            "score": 4.177201
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p009:c05",
+            "score": 3.964648
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "SBV credit growth target 2018",
+        "filter": null,
+        "latency_s": 0.704,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p020:c05",
+            "score": 7.772377
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p021:c01",
+            "score": 5.937917
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p010:c02",
+            "score": -0.150909
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "credit growth rate of 17 percent SBV",
+        "filter": null,
+        "latency_s": 0.778,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p020:c05",
+            "score": 6.012941
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p021:c01",
+            "score": 5.075627
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p021:c02",
+            "score": 2.914451
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p020:c05",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p020:c04"
+          },
+          {
+            "id": "A:ts-2018-06:p020:c06"
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p020:c05"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p010:c04",
+      "A:ts-2017-12:p022:c01",
+      "A:ts-2018-06:p009:c05",
+      "A:ts-2018-06:p020:c05",
+      "A:ts-2018-06:p021:c01",
+      "A:ts-2018-06:p010:c02",
+      "A:ts-2018-06:p021:c02",
+      "A:ts-2018-06:p020:c04",
+      "A:ts-2018-06:p020:c06"
+    ],
+    "context_chars": 4993,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 7581,
+    "tokens_out": 222,
+    "cost_usd": 0.002829,
+    "latency_s": 32.81,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": false,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "answerable": true,
+    "question": "How much foreign direct investment was actually disbursed in Vietnam in 2017?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "In 2017, foreign investors disbursed a record US$17.5 billion to Vietnam (as reported in the June 2018 edition; the December 2017 edition reported that foreign-invested firms had disbursed US$14.2 billion).",
+    "citations": [
+      "A:ts-2018-06:p026:c01",
+      "A:ts-2017-12:p028:c03"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "foreign direct investment disbursed in Vietnam 2017",
+        "filter": null,
+        "latency_s": 0.569,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p026:c01",
+            "score": 8.385378
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p026:c02",
+            "score": 8.085854
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p028:c03",
+            "score": 7.863204
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "FDI disbursed US$ 2017 Vietnam Taking Stock June 2018",
+        "filter": null,
+        "latency_s": 0.561,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p026:c01",
+            "score": 6.720684
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p028:c03",
+            "score": 4.858806
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p026:c02",
+            "score": 4.8574
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "disbursed US$ billion 2017 foreign investors Vietnam June 2018",
+        "filter": null,
+        "latency_s": 0.732,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p026:c01",
+            "score": 8.283407
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p028:c03",
+            "score": 6.786315
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p026:c02",
+            "score": 5.429962
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "17.5 billion 2017 Vietnam",
+        "filter": null,
+        "latency_s": 0.607,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p023:c05",
+            "score": 7.882929
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p026:c01",
+            "score": 7.165173
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p010:c06",
+            "score": 5.229315
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p026:c01",
+          "A:ts-2017-12:p028:c03"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p026:c01",
+      "A:ts-2018-06:p026:c02",
+      "A:ts-2017-12:p028:c03",
+      "A:ts-2017-12:p023:c05",
+      "A:ts-2017-12:p010:c06"
+    ],
+    "context_chars": 2855,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 5906,
+    "tokens_out": 249,
+    "cost_usd": 0.002394,
+    "latency_s": 32.98,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "answerable": true,
+    "question": "How long does documentary compliance for imports take in Vietnam compared with the ASEAN-4 average?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "Documentary compliance for imports in Vietnam takes 76 hours, which is significantly higher than the ASEAN-4 average of 28 hours [A:ts-2018-06:p039:c01].",
+    "citations": [
+      "A:ts-2018-06:p039:c01"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "documentary compliance imports Vietnam ASEAN-4 average",
+        "filter": null,
+        "latency_s": 0.858,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p039:c02",
+            "score": 7.955785
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p039:c01",
+            "score": 7.287508
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p039:c03",
+            "score": 7.173488
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p039:c01",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p039:c00"
+          },
+          {
+            "id": "A:ts-2018-06:p039:c02"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p039:c02",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p039:c01"
+          },
+          {
+            "id": "A:ts-2018-06:p039:c03"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "documentary compliance imports Vietnam ASEAN-4 76 hours",
+        "filter": null,
+        "latency_s": 0.659,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p039:c01",
+            "score": 7.92228
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p039:c02",
+            "score": 7.067245
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p039:c04",
+            "score": 5.145451
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "\"76 hours\" \"28 hours\" Vietnam ASEAN-4",
+        "filter": null,
+        "latency_s": 0.613,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p039:c01",
+            "score": 5.96792
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p039:c02",
+            "score": 4.673306
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p039:c03",
+            "score": 0.09958
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "documentary compliance imports Vietnam ASEAN-4 2017",
+        "filter": null,
+        "latency_s": 0.717,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p054:c02",
+            "score": 5.96497
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p039:c04",
+            "score": 5.776011
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p054:c03",
+            "score": 5.774328
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p039:c01"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p039:c02",
+      "A:ts-2018-06:p039:c01",
+      "A:ts-2018-06:p039:c03",
+      "A:ts-2018-06:p039:c00",
+      "A:ts-2018-06:p039:c04",
+      "A:ts-2018-06:p054:c02",
+      "A:ts-2018-06:p054:c03"
+    ],
+    "context_chars": 3835,
+    "llm_calls": 7,
+    "searches": 6,
+    "tokens_in": 9839,
+    "tokens_out": 282,
+    "cost_usd": 0.003657,
+    "latency_s": 45.23,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "answerable": true,
+    "question": "What proportion of the total cost of importing into Vietnam comes from logistics such as domestic transport and port handling?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời (hết số bước).",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "proportion of the total cost of importing into Vietnam logistics domestic transport port handling",
+        "filter": null,
+        "latency_s": 0.595,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p041:c01",
+            "score": 7.341977
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p041:c03",
+            "score": 6.578862
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p041:c00",
+            "score": 5.547214
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "logistics costs domestic transport port handling account for total cost to import Vietnam",
+        "filter": null,
+        "latency_s": 0.527,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p041:c01",
+            "score": 7.529342
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p041:c03",
+            "score": 6.967537
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p041:c00",
+            "score": 6.190161
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p041:c00",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p041:c01"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "logistics costs domestic transport and port handling account for 64 percent of the total cost to import",
+        "filter": null,
+        "latency_s": 0.594,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p041:c00",
+            "score": 9.040201
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p041:c04",
+            "score": 6.162503
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p041:c01",
+            "score": 5.818702
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p041:c04",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p041:c03"
+          },
+          {
+            "id": "A:ts-2018-06:p041:c05"
+          }
+        ]
+      },
+      {
+        "event": "tool_error",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p041:c02"
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Cost to Import Breakdown domestic transport port handling",
+        "filter": null,
+        "latency_s": 0.533,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p041:c05",
+            "score": 7.814298
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p041:c00",
+            "score": 6.775509
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p041:c01",
+            "score": 5.669694
+          }
+        ]
+      },
+      {
+        "event": "step_limit"
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p041:c01",
+      "A:ts-2018-06:p041:c03",
+      "A:ts-2018-06:p041:c00",
+      "A:ts-2018-06:p041:c04",
+      "A:ts-2018-06:p041:c05"
+    ],
+    "context_chars": 2855,
+    "llm_calls": 7,
+    "searches": 6,
+    "tokens_in": 9327,
+    "tokens_out": 233,
+    "cost_usd": 0.003381,
+    "latency_s": 45.91,
+    "model": "gemini-3.5-flash-lite",
+    "abstain_reason": "step_limit",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": false
+    }
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "answerable": true,
+    "question": "What was Vietnam's total public debt in 2017 as a share of GDP?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "Vietnam's total public debt was estimated at 62.6 percent of GDP in 2017 [A:ts-2017-12:p032:c00].",
+    "citations": [
+      "A:ts-2017-12:p032:c00"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "public debt 2017 GDP",
+        "filter": {
+          "edition": "2017-12"
+        },
+        "latency_s": 0.908,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p032:c00",
+            "score": 5.478539
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p032:c05",
+            "score": 4.78646
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p030:c02",
+            "score": 4.477799
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p032:c00",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p032:c01"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "total public debt 62.6 percent",
+        "filter": {
+          "edition": "2017-12"
+        },
+        "latency_s": 0.848,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p032:c00",
+            "score": 5.862988
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p012:c01",
+            "score": 3.046707
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p035:c02",
+            "score": 2.262183
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "public debt estimated 62.6 percent",
+        "filter": {
+          "edition": "2017-12"
+        },
+        "latency_s": 1.042,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p032:c00",
+            "score": 6.86154
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p012:c01",
+            "score": 3.350042
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p035:c02",
+            "score": 2.717071
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p032:c00",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p032:c01"
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Table 1.1 Vietnam key macroeconomic indicators 2017 public debt",
+        "filter": {
+          "edition": "2017-12"
+        },
+        "latency_s": 1.29,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p012:c00",
+            "score": 4.830663
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p032:c00",
+            "score": 4.748576
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p036:c00",
+            "score": 0.248935
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p032:c00"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p032:c00",
+      "A:ts-2017-12:p032:c05",
+      "A:ts-2017-12:p030:c02",
+      "A:ts-2017-12:p032:c01",
+      "A:ts-2017-12:p012:c01",
+      "A:ts-2017-12:p035:c02",
+      "A:ts-2017-12:p012:c00",
+      "A:ts-2017-12:p036:c00"
+    ],
+    "context_chars": 4480,
+    "llm_calls": 7,
+    "searches": 6,
+    "tokens_in": 11456,
+    "tokens_out": 271,
+    "cost_usd": 0.004114,
+    "latency_s": 44.96,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "answerable": true,
+    "question": "What record level did Vietnam's foreign reserves reach according to the report?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "answered",
+    "answer": "According to the June 2018 report, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion in the first four months of 2018, which is more than twice the nominal level reported in December 2015 and equal to around 3.6 months of imports.",
+    "citations": [
+      "A:ts-2018-06:p026:c05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "foreign reserves record level",
+        "filter": {
+          "edition": "2018-06"
+        },
+        "latency_s": 0.734,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p026:c05",
+            "score": 6.449708
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p026:c04",
+            "score": -4.641097
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p026:c03",
+            "score": -4.731179
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p026:c05"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p026:c05",
+      "A:ts-2018-06:p026:c04",
+      "A:ts-2018-06:p026:c03"
+    ],
+    "context_chars": 1713,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1682,
+    "tokens_out": 135,
+    "cost_usd": 0.000842,
+    "latency_s": 13.64,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "u01",
+    "split": "dev",
+    "answerable": false,
+    "question": "What was Vietnam's official unemployment rate in 2017?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "abstain",
+    "answer": "The provided reports do not contain information on Vietnam's official unemployment rate in 2017.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "unemployment rate 2017 Vietnam",
+        "filter": null,
+        "latency_s": 0.528,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p009:c08",
+            "score": 4.079213
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p010:c04",
+            "score": 3.168538
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p016:c00",
+            "score": 2.64413
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "unemployment rate 2017",
+        "filter": null,
+        "latency_s": 0.664,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p019:c00",
+            "score": 2.043878
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p018:c01",
+            "score": 1.614434
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p011:c07",
+            "score": 1.442033
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "unemployment rate",
+        "filter": null,
+        "latency_s": 0.518,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p019:c00",
+            "score": -1.584014
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p032:c03",
+            "score": -1.815775
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p011:c07",
+            "score": -2.60011
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "unemployed",
+        "filter": null,
+        "latency_s": 0.544,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p011:c07",
+            "score": -6.359821
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p018:c01",
+            "score": -6.377166
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p011:c06",
+            "score": -7.40069
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "insufficient_evidence",
+        "cited": [],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p009:c08",
+      "A:ts-2017-12:p010:c04",
+      "A:ts-2018-06:p016:c00",
+      "A:ts-2017-12:p019:c00",
+      "A:ts-2018-06:p018:c01",
+      "A:ts-2017-12:p011:c07",
+      "A:ts-2018-06:p032:c03",
+      "A:ts-2017-12:p011:c06"
+    ],
+    "context_chars": 4529,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 7007,
+    "tokens_out": 130,
+    "cost_usd": 0.002427,
+    "latency_s": 32.68,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "query_id": "u02",
+    "split": "dev",
+    "answerable": false,
+    "question": "What sovereign credit rating did Moody's or Fitch assign to Vietnam in 2018?",
+    "config": "A2_hybrid_rerank_adj",
+    "status": "abstain",
+    "answer": "The provided World Bank reports (\"Taking Stock\" December 2017 and June 2018) do not contain information about sovereign credit ratings assigned by Moody's or Fitch to Vietnam in 2018.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Moody's Fitch sovereign credit rating Vietnam 2018",
+        "filter": null,
+        "latency_s": 0.539,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p021:c02",
+            "score": -1.703484
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p009:c05",
+            "score": -1.736767
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p010:c04",
+            "score": -1.912739
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Moody's Fitch rating Vietnam",
+        "filter": null,
+        "latency_s": 0.541,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p011:c04",
+            "score": -4.182642
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p033:c01",
+            "score": -4.443061
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p021:c02",
+            "score": -4.526958
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Moody's Fitch rating",
+        "filter": null,
+        "latency_s": 0.756,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p012:c01",
+            "score": -10.075679
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p030:c01",
+            "score": -10.833744
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p011:c04",
+            "score": -11.011309
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Moody's OR Fitch",
+        "filter": null,
+        "latency_s": 0.563,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p023:c01",
+            "score": -11.044338
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p030:c02",
+            "score": -11.132993
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p023:c00",
+            "score": -11.158796
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "insufficient_evidence",
+        "cited": [],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p021:c02",
+      "A:ts-2018-06:p009:c05",
+      "A:ts-2017-12:p010:c04",
+      "A:ts-2017-12:p011:c04",
+      "A:ts-2017-12:p033:c01",
+      "A:ts-2017-12:p012:c01",
+      "A:ts-2018-06:p030:c01",
+      "A:ts-2017-12:p023:c01",
+      "A:ts-2018-06:p030:c02",
+      "A:ts-2017-12:p023:c00"
+    ],
+    "context_chars": 5709,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 7275,
+    "tokens_out": 163,
+    "cost_usd": 0.00259,
+    "latency_s": 32.11,
+    "model": "gemini-3.5-flash-lite"
+  }
+]

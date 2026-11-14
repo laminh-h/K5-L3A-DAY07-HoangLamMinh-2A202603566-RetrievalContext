@@ -1,0 +1,9 @@
+{
+  "_rule": "Fixed after dev runs, before any test run. Agent: highest dev grounded-answer mean; tie -> fewer false abstentions -> higher citation validity -> correct abstention on unanswerable -> lower latency. Baseline = A1_dense (Day 6 dense retriever as the only tool).",
+  "agent_baseline": "A1_dense",
+  "agent_selected": "A3_hybrid_rerank_adj_steps",
+  "baseline": "R1_dense",
+  "selected": "R4_hybrid_rerank",
+  "retrieval_rule": "Retrieval-only: highest dev Context Evidence Rate; tie -> Evidence Hit@3 -> MRR@10 -> fewer context chars. R3/R4/R6 tie at 14/15, 14/15; R4 and R6 tie on MRR 0.736; R4 uses fewer context chars. R4 is also the retriever inside A3.",
+  "frozen_at": "2026-11-14"
+}

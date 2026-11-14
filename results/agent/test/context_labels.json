@@ -1,0 +1,82 @@
+[
+  {
+    "config": "A1_dense",
+    "query_id": "q16",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Context has p17 c06 with the full sentence and page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "q17",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "p46 c00 in context.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "q18",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "p50 c02 in context.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "q19",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": false,
+    "reason": "Strict gold miss, but p10 c02 table with header 2016/2017e/2018f and GFS row is sufficient evidence with source.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "q20",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": false,
+    "reason": "p10 c00 is an equivalent statement in the same edition (overview) -> sufficient.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "q16",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Context has c05 and c06 (gold).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "q17",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "p46 c00 in context.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "q18",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "p50 c02 in context.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "q19",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold p28 in context; edition filter kept 2017-12 \"around 4%\" out.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "q20",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": false,
+    "reason": "p10 c00 equivalent evidence; gold p31 not retrieved.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "_note": "Retrieval-only configs, all on Day 6 index A (618 chunks). 'use_filter' applies only the filter the user supplied with the question (never gold). Context = candidates packed under budget_chars (chars incl. the [id]/source header). Frozen configs used on test are listed in configs/selected.json.",
+  "configs": {
+    "R1_dense": {
+      "method": "dense",
+      "use_filter": true,
+      "context_k": 3,
+      "budget_chars": 2400,
+      "neighbor_window": 0,
+      "hypothesis": "Baseline: Day 6 dense retrieval (MiniLM 384d, Chroma cosine) + user edition filter, top-3 as context."
+    },
+    "R2_bm25": {
+      "method": "bm25",
+      "use_filter": true,
+      "context_k": 3,
+      "budget_chars": 2400,
+      "neighbor_window": 0,
+      "hypothesis": "Lexical BM25 matches exact numbers, years and economic terms (e.g. '2018', 'PMI') that a small multilingual embedder blurs."
+    },
+    "R3_hybrid": {
+      "method": "hybrid",
+      "use_filter": true,
+      "context_k": 3,
+      "budget_chars": 2400,
+      "neighbor_window": 0,
+      "hypothesis": "RRF of dense+BM25 (50 candidates each, k=60) keeps semantic matches and adds exact-term matches; should beat both single retrievers on Hit@3."
+    },
+    "R4_hybrid_rerank": {
+      "method": "hybrid+rerank",
+      "use_filter": true,
+      "context_k": 3,
+      "budget_chars": 2400,
+      "neighbor_window": 0,
+      "hypothesis": "A cross-encoder reading query and chunk jointly fixes ranking errors where the topic sentence outranks the chunk with the number (Day 6 q08, q20)."
+    },
+    "R5_dense_neighbors": {
+      "method": "dense",
+      "use_filter": true,
+      "context_k": 3,
+      "budget_chars": 4800,
+      "neighbor_window": 1,
+      "hypothesis": "Improvement on dev errors q08/q10: index A cuts a claim from its number across adjacent 500-char windows; adding same-page neighbors (c-1, c+1) of each top-3 hit to the context should raise Context Evidence Rate without changing ranking."
+    },
+    "R6_hybrid_rerank_neighbors": {
+      "method": "hybrid+rerank",
+      "use_filter": true,
+      "context_k": 3,
+      "budget_chars": 4800,
+      "neighbor_window": 1,
+      "hypothesis": "Combine the two improvements: rerank fixes wrong-period top hits (q01), neighbors recover split evidence (q08); expect the best Context Evidence Rate at ~2x context chars."
+    }
+  }
+}

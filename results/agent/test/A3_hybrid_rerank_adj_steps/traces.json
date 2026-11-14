@@ -1,0 +1,643 @@
+[
+  {
+    "query_id": "q16",
+    "split": "test",
+    "answerable": true,
+    "question": "What was the Vietnam Manufacturing PMI in September 2017?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "answered",
+    "answer": "The headline Vietnam Manufacturing Purchasing Managers' Index (PMI) rose to 53.3 in September 2017.",
+    "citations": [
+      "A:ts-2017-12:p017:c05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "Manufacturing PMI September 2017",
+        "filter": null,
+        "latency_s": 2.424,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p017:c05",
+            "score": 6.279135
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p017:c06",
+            "score": 5.41408
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p016:c00",
+            "score": 2.683521
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2017-12:p017:c05",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2017-12:p017:c04"
+          },
+          {
+            "id": "A:ts-2017-12:p017:c06"
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p017:c05"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p017:c05",
+      "A:ts-2017-12:p017:c06",
+      "A:ts-2017-12:p016:c00",
+      "A:ts-2017-12:p017:c04"
+    ],
+    "context_chars": 2001,
+    "llm_calls": 3,
+    "searches": 2,
+    "tokens_in": 2912,
+    "tokens_out": 135,
+    "cost_usd": 0.001211,
+    "latency_s": 14.65,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": false
+    }
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "answerable": true,
+    "question": "In the 2016 customs survey, what share of declarations went through the green channel?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "answered",
+    "answer": "In the 2016 survey of Vietnam Customs, the green channel accounted for 59.8 percent of the total number of declarations.",
+    "citations": [
+      "A:ts-2018-06:p046:c00"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "customs survey green channel share 2016",
+        "filter": null,
+        "latency_s": 0.542,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p046:c00",
+            "score": 4.791882
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p028:c01",
+            "score": -6.012014
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p046:c01",
+            "score": -6.307809
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p046:c00",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p046:c01"
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p046:c00"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p046:c00",
+      "A:ts-2017-12:p028:c01",
+      "A:ts-2018-06:p046:c01"
+    ],
+    "context_chars": 1713,
+    "llm_calls": 3,
+    "searches": 2,
+    "tokens_in": 2834,
+    "tokens_out": 141,
+    "cost_usd": 0.001203,
+    "latency_s": 19.42,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "answerable": true,
+    "question": "How old is Vietnam's active trucking fleet on average, compared with countries such as Australia or Japan?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "answered",
+    "answer": "The average age of Vietnam's active trucking fleet is 17 years, which is much greater than 14 years in Australia and 9 years in Japan (as well as 9 years in Canada, 8 years in the U.K., and 6-6.5 years in the U.S. and France).",
+    "citations": [
+      "A:ts-2018-06:p050:c02"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "trucking fleet average age Australia Japan",
+        "filter": null,
+        "latency_s": 0.64,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p050:c02",
+            "score": 5.69661
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p046:c04",
+            "score": -8.319959
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p055:c03",
+            "score": -10.119419
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "get_adjacent_chunks",
+        "chunk_id": "A:ts-2018-06:p050:c02",
+        "budget_full": false,
+        "results": [
+          {
+            "id": "A:ts-2018-06:p050:c01"
+          },
+          {
+            "id": "A:ts-2018-06:p050:c03"
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p050:c02"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p050:c02",
+      "A:ts-2017-12:p046:c04",
+      "A:ts-2018-06:p055:c03",
+      "A:ts-2018-06:p050:c01",
+      "A:ts-2018-06:p050:c03"
+    ],
+    "context_chars": 2855,
+    "llm_calls": 3,
+    "searches": 2,
+    "tokens_in": 3095,
+    "tokens_out": 176,
+    "cost_usd": 0.001368,
+    "latency_s": 19.56,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "answerable": true,
+    "question": "What was Vietnam's overall fiscal deficit in 2017 as a percentage of GDP?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "answered",
+    "answer": "Vietnam's overall fiscal deficit narrowed to an estimated 4.5 percent of GDP in 2017 (IMF GFS definition).",
+    "citations": [
+      "A:ts-2018-06:p028:c03"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "fiscal deficit 2017 GDP",
+        "filter": {
+          "edition": "2018-06"
+        },
+        "latency_s": 0.808,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p028:c03",
+            "score": 7.349002
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p009:c06",
+            "score": 6.113195
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p029:c00",
+            "score": 5.97471
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p028:c03"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p028:c03",
+      "A:ts-2018-06:p009:c06",
+      "A:ts-2018-06:p029:c00"
+    ],
+    "context_chars": 1712,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1713,
+    "tokens_out": 98,
+    "cost_usd": 0.000759,
+    "latency_s": 13.2,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "answerable": true,
+    "question": "What real GDP growth rate does the World Bank project for Vietnam in 2018?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "answered",
+    "answer": "The World Bank projects real GDP to expand by 6.8 percent in 2018.",
+    "citations": [
+      "A:ts-2018-06:p010:c00"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "real GDP growth rate project 2018 Vietnam June 2018",
+        "filter": {
+          "edition": "2018-06"
+        },
+        "latency_s": 0.566,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p016:c00",
+            "score": 6.637199
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p010:c00",
+            "score": 6.562028
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p009:c01",
+            "score": 6.309531
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p010:c00"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p016:c00",
+      "A:ts-2018-06:p010:c00",
+      "A:ts-2018-06:p009:c01"
+    ],
+    "context_chars": 1712,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1743,
+    "tokens_out": 99,
+    "cost_usd": 0.00077,
+    "latency_s": 12.6,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": false,
+      "first_search_hit_at_3": false,
+      "cited_evidence_chunk": false
+    }
+  },
+  {
+    "query_id": "u03",
+    "split": "test",
+    "answerable": false,
+    "question": "What regional minimum wage did Vietnam set for 2018?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "abstain",
+    "answer": "The provided World Bank reports (\"Taking Stock\" December 2017 and June 2018) do not contain information regarding the specific regional minimum wage set by Vietnam for 2018.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "minimum wage 2018 regional Vietnam",
+        "filter": null,
+        "latency_s": 0.543,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p009:c08",
+            "score": -1.240505
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p042:c04",
+            "score": -2.239988
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p043:c02",
+            "score": -2.329237
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "regional minimum wage 2018",
+        "filter": null,
+        "latency_s": 0.582,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p014:c03",
+            "score": -4.162153
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p032:c03",
+            "score": -6.987987
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p011:c07",
+            "score": -7.866343
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "minimum wage",
+        "filter": null,
+        "latency_s": 0.547,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p011:c07",
+            "score": -4.767127
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p042:c03",
+            "score": -6.339459
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p019:c00",
+            "score": -6.870345
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "minimum wage 2018",
+        "filter": null,
+        "latency_s": 0.545,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p032:c03",
+            "score": -2.955801
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p011:c07",
+            "score": -3.718797
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p018:c01",
+            "score": -5.752035
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "insufficient_evidence",
+        "cited": [],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p009:c08",
+      "A:ts-2017-12:p042:c04",
+      "A:ts-2017-12:p043:c02",
+      "A:ts-2018-06:p014:c03",
+      "A:ts-2018-06:p032:c03",
+      "A:ts-2017-12:p011:c07",
+      "A:ts-2017-12:p042:c03",
+      "A:ts-2017-12:p019:c00",
+      "A:ts-2018-06:p018:c01"
+    ],
+    "context_chars": 5100,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 7191,
+    "tokens_out": 156,
+    "cost_usd": 0.002547,
+    "latency_s": 32.81,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "query_id": "u04",
+    "split": "test",
+    "answerable": false,
+    "question": "By what percentage did Vietnam raise the retail electricity tariff in 2017?",
+    "config": "A3_hybrid_rerank_adj_steps",
+    "status": "abstain",
+    "answer": "The provided World Bank reports (\"Taking Stock\" December 2017 and June 2018) do not contain information on the percentage by which Vietnam raised the retail electricity tariff in 2017.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "retail electricity tariff 2017 percentage Vietnam",
+        "filter": null,
+        "latency_s": 0.537,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p009:c05",
+            "score": 2.512374
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p031:c01",
+            "score": 0.906844
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p011:c02",
+            "score": 0.785256
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "electricity tariff 2017 percent",
+        "filter": null,
+        "latency_s": 0.6,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p031:c00",
+            "score": -1.157658
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p031:c01",
+            "score": -1.91414
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p031:c02",
+            "score": -2.785721
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "retail electricity tariff",
+        "filter": null,
+        "latency_s": 0.591,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p031:c01",
+            "score": -4.042257
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p031:c02",
+            "score": -5.115177
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p031:c00",
+            "score": -6.770164
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "electricity tariff 2017",
+        "filter": null,
+        "latency_s": 0.511,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p031:c00",
+            "score": -2.455199
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p031:c01",
+            "score": -3.071212
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p031:c02",
+            "score": -3.617866
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "insufficient_evidence",
+        "cited": [],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p009:c05",
+      "A:ts-2018-06:p031:c01",
+      "A:ts-2018-06:p011:c02",
+      "A:ts-2018-06:p031:c00",
+      "A:ts-2018-06:p031:c02"
+    ],
+    "context_chars": 2854,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 6005,
+    "tokens_out": 160,
+    "cost_usd": 0.002201,
+    "latency_s": 32.38,
+    "model": "gemini-3.5-flash-lite"
+  }
+]

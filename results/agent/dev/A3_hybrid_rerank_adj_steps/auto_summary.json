@@ -1,0 +1,46 @@
+{
+  "config": "A3_hybrid_rerank_adj_steps",
+  "split": "dev",
+  "method": "hybrid+rerank",
+  "top_k": 3,
+  "budget_chars": 6000,
+  "max_searches": 4,
+  "adjacent_tool": true,
+  "max_adjacent": 2,
+  "max_steps": 9,
+  "hypothesis": "Dev error A2/q13: get_adjacent_chunks consumed the shared 7-step budget and the run ended in step_limit although the evidence was already in context. Cap adjacent calls at 2 and give 9 steps (4 search + 2 adjacent + final + slack) -> no step_limit abstentions, same retrieval.",
+  "model": "gemini-3.5-flash-lite",
+  "N": 17,
+  "status": {
+    "answered": 15,
+    "abstain": 2
+  },
+  "provider_errors": 0,
+  "tool_use": "17/17",
+  "searches_distribution": {
+    "1": 5,
+    "2": 2,
+    "3": 2,
+    "4": 4,
+    "5": 2,
+    "6": 2
+  },
+  "llm_calls_distribution": {
+    "2": 5,
+    "3": 2,
+    "4": 2,
+    "5": 4,
+    "6": 2,
+    "7": 2
+  },
+  "context_evidence_rate": "15/15",
+  "first_search_hit_at_3": "14/15",
+  "auto_cited_gold_chunk": "15/15",
+  "abstained_unanswerable": "2/2",
+  "abstained_answerable": "0/15",
+  "avg_context_chars": 2910,
+  "avg_latency_s": 26.87,
+  "tokens_in": 86792,
+  "tokens_out": 3030,
+  "est_cost_usd_list_price": 0.03361
+}

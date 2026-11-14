@@ -1,0 +1,1700 @@
+{
+  "config": "R6_hybrid_rerank_neighbors",
+  "method": "hybrid+rerank",
+  "use_filter": true,
+  "context_k": 3,
+  "budget_chars": 4800,
+  "neighbor_window": 1,
+  "hypothesis": "Combine the two improvements: rerank fixes wrong-period top hits (q01), neighbors recover split evidence (q08); expect the best Context Evidence Rate at ~2x context chars.",
+  "N": 15,
+  "hit_at_1": "8/15",
+  "evidence_hit_at_3": "14/15",
+  "mrr_at_10": 0.736,
+  "recall_at_10": "15/15",
+  "context_evidence_rate": "14/15",
+  "avg_context_chars": 3774,
+  "retrieval_latency_ms_per_query": 982.0,
+  "cost_usd": 0.0,
+  "traces": [
+    {
+      "query_id": "q01",
+      "question": "What was the level of Vietnam's gross international reserves at the end of September 2017?",
+      "filter": null,
+      "latency_s": 2.5949,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p011:c01",
+        "A:ts-2017-12:p011:c00",
+        "A:ts-2017-12:p011:c02",
+        "A:ts-2017-12:p029:c03",
+        "A:ts-2017-12:p029:c02",
+        "A:ts-2018-06:p026:c05",
+        "A:ts-2018-06:p026:c04",
+        "A:ts-2018-06:p026:c06"
+      ],
+      "context_chars": 4393,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p011:c01",
+          "score": 3.733112,
+          "page": 11,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "s of about US$5 billion during the first three quarters, bringing gross international reserves to around US$42 billion at the end of September, equal to just below three months of imports. Fiscal consolidation is underway, but the quality a"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p029:c03",
+          "score": 2.427654,
+          "page": 29,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "ate. The SBV has kept the nominal US$ dong exchange rate within a narrow trading band with year to date devaluation of the reference rate of 1.4 percent. This helped contain real effective exchange rate appreciation of the dong and allowed "
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p026:c05",
+          "score": 2.369238,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rsed in recent months as U.S. dollar has shown tentative signs of a recovery. Meanwhile, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion3 in the first four month of 2018, more than twice the nominal "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p027:c00",
+          "score": 0.212879,
+          "page": 27,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Figure 25. Dong/US$ exchange rate Figure 26. International reserves Source: World Bank. Source: SBV, IMF and World Bank. Q1-13 Q1-14 Q1-15 Q1-16 Q1-17 4M-18 Reserves (accumulated, US$ billion, LHS) Import covers (month, RHS) Jan 16 May 16 S"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p023:c05",
+          "score": -0.770713,
+          "page": 23,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "s 1.17. improved external demand strengthened Vietnam's already strong export performance. Vietnam's total export turnover between January and October 2017 is estimated at $174.5 billion, up 21.3 percent from the same period last year. Prim"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p028:c03",
+          "score": -1.176661,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " MOF , World Bank and IMF . Thanks to a continued adjustment in the fiscal position, public debt stabilized in 2017 22. Vietnam's fiscal stance improved further in 2017. The overall fiscal deficit is estimated to have narrowed to an estimat"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p028:c03",
+          "score": -1.974354,
+          "page": 28,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "gn investors committed US$ 28 billion to Vietnam - a 37 percent increase compared to the same period last year. It is worth to note that the commitment reached the highest level since its peak of 2008. At the same time, foreign-invested fir"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p010:c06",
+          "score": -2.699673,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "th. Vietnam's balance of payments remains in surplus, underpinned by a trade surplus, resilient remittances, and large FDi inflows. Improved external demand helped lift Vietnam's already strong export performance. Underpinned by broad-based"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p012:c00",
+          "score": -3.110089,
+          "page": 12,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Externally, Vietnam is projected to retain a current account surplus, albeit at a lower level due a sustained recovery in imports. This year's fiscal deficit is on track to come in at around 4 percent below the government's target of 4.8 pe"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p021:c02",
+          "score": -3.681592,
+          "page": 21,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "s, below the estimate of 18.2 percent cumulative credit growth in 2017 (figure 17). Vietnam credit cycle stands out from trends in most other countries of the region, including China, which have seen gradual tightening. Vietnam's overall cr"
+        }
+      ]
+    },
+    {
+      "query_id": "q02",
+      "question": "By how much did the State Bank of Vietnam cut its rediscount and refinancing rates in July 2017, and to what levels?",
+      "filter": null,
+      "latency_s": 2.4345,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p010:c04",
+        "A:ts-2017-12:p010:c03",
+        "A:ts-2017-12:p010:c05",
+        "A:ts-2017-12:p022:c01",
+        "A:ts-2017-12:p022:c00",
+        "A:ts-2017-12:p022:c02",
+        "A:ts-2018-06:p026:c05",
+        "A:ts-2018-06:p026:c04"
+      ],
+      "context_chars": 4568,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p010:c04",
+          "score": 8.847828,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "nflation of 1.3 percent (y/y) in October. Taking advantage of subdued inflation, the State Bank of Vietnam in July cut its rediscount rate and refinancing rate by 25 basis points to 4.25 and 6.25 percent respectively. Credit growth remained"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p022:c01",
+          "score": 7.170549,
+          "page": 22,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "al credit output Ratio is rising 1.14. amidst subdued price pressures, the authorities have proactively eased the monetary policy stance to support economic growth. With moderate inflation, the State Bank of Vietnam in July eased monetary s"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p026:c05",
+          "score": 0.477268,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rsed in recent months as U.S. dollar has shown tentative signs of a recovery. Meanwhile, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion3 in the first four month of 2018, more than twice the nominal "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p011:c08",
+          "score": -0.801021,
+          "page": 11,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " (US$1.90 per day). Medium-term outlook, risks, and policy implications Vietnam's near-term outlook has improved since the July Taking stock report. Aided by favorable external and domestic conditions, GDP growth is now projected to acceler"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p028:c03",
+          "score": -1.392963,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " MOF , World Bank and IMF . Thanks to a continued adjustment in the fiscal position, public debt stabilized in 2017 22. Vietnam's fiscal stance improved further in 2017. The overall fiscal deficit is estimated to have narrowed to an estimat"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p032:c00",
+          "score": -1.841926,
+          "page": 32,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "1.28. The reduction in budget deficit contained public debt accumulation. Vietnam's total public debt increased markedly by nearly 12 percentage points of GDP from 50.8 percent in 2012 to an estimated 62.6 percent3 in 2017, approaching Viet"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p011:c02",
+          "score": -2.109063,
+          "page": 11,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ient border management and logistics. Through various trade agreements Vietnam has cut tariffs significantly with the average favored-nation (MFN) tariff now in the range of 0 to five percent for almost all tariff lines and commodities at t"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p009:c05",
+          "score": -2.701378,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "he backdrop of low inflation, monetary policy remains accommodative. Vietnam's consumer price index has been ticking up slightly 2.8 percent (y/y) in the first four months of 2018, driven by hikes in administered prices (for electricity and"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p021:c00",
+          "score": -3.422762,
+          "page": 21,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "real short-term interest rates are effectively zero or even negative (figure 15). Abundant liquidity could exacerbate volatility in Vietnam's financial markets, especially against the backdrop of tighter global monetary conditions and rapid"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p017:c05",
+          "score": -3.428953,
+          "page": 17,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ase of doing business ranking (68th in the world, up 31 places since 2014). Vietnam also reduced the corporate income tax rate to 20 percent from 32 percent in 2003. Finally, Vietnam invested in infrastructure, especially in the power secto"
+        }
+      ]
+    },
+    {
+      "query_id": "q03",
+      "question": "In the first nine months of 2017, what share of total spending did public investment fall to, compared with its 2012-2016 average?",
+      "filter": null,
+      "latency_s": 1.4104,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p031:c03",
+        "A:ts-2017-12:p031:c02",
+        "A:ts-2017-12:p030:c02",
+        "A:ts-2017-12:p030:c01",
+        "A:ts-2017-12:p030:c03",
+        "A:ts-2017-12:p011:c02",
+        "A:ts-2017-12:p011:c01",
+        "A:ts-2017-12:p011:c03"
+      ],
+      "context_chars": 4566,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p031:c03",
+          "score": 9.171414,
+          "page": 31,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "diture growth moderated. During the first nine months, total expenditure increased in nominal terms by 6.6 percent, with recurrent and investment spending increasing by 7 and 4 percent, respectively. The share of investment spending in tota"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p030:c02",
+          "score": 7.158113,
+          "page": 30,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "d to less than 2 percent of GDP (annualized). This helped contain public debt accumulation and ensured compliance with 65 percent of GDP statutory debt limit. On the revenue side, deficit reduction was aided by buoyant revenue performance. "
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p011:c02",
+          "score": 6.631677,
+          "page": 11,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "cumulation and ensuring compliance with 65 percent of the GDP statutory debt limit. On the revenue side, deficit reduction was aided by buoyant revenue performance. On the spending side, the adjustment has fallen disproportionately on publi"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p030:c03",
+          "score": 3.603805,
+          "page": 30,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "er 2012-2016. While the focus on efficiency of public investment is welcome, across-the-board curtailment of investment spending raises concerns as Vietnam needs significant infrastructure investment to support future growth. 1.25. Revenue "
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p017:c09",
+          "score": 1.466614,
+          "page": 17,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "er of 2018, investment growth picked up 10.4 percent (y/y) in nominal terms, bringing total investment outlays to about 32.2 percent as a share of GDP (figure 7). While public investment has decelerated, due to the government's commitments "
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p021:c00",
+          "score": -0.239498,
+          "page": 21,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2005 2008 2011 2014 2017e Total invesment Gross capital formation Gross national savings 2005 2008 2011 2014 9M-17 StateForeign Non-state Total Source: GSO, WB and IMF . 1.12. investment growth is recovering gradually with rebalancing towar"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p009:c07",
+          "score": -0.314238,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "a decline in public-debt-to-GDP ratio to 61.4 percent in 2017 from 63.7 percent in 2016. During first quarter of 2018, the government continued to contain expenditure growth to offset relatively weak revenue performance. Driven by low infla"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p023:c02",
+          "score": -0.414588,
+          "page": 23,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ment declined 8.9 percent in the first four months of 2018 compared with the same period last year - largely by foreign firms' contraction of 15 percent, reflecting high statistical base effects and fluctuations due to the lumpiness of inve"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p030:c01",
+          "score": -0.670516,
+          "page": 30,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " Capital revenue Trillion dong Total revenue Taxes Fee, charges and non-tax Capital revenue 9M-2016 9M-2017 Change (y/y, %) Taxes Fee, charges and non-tax Capital revenue Trillion dong Source: SBV and World Bank. Source: MOF . Fiscal consol"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p029:c00",
+          "score": -1.373622,
+          "page": 29,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "23. After a decade of steady increases in the public-debt-to-GDP ratio, 2017 saw a welcome reversal in the public debt trajectory. The lower fiscal deficit in 2017 together with a reduction in government guarantees and significant privatiza"
+        }
+      ]
+    },
+    {
+      "query_id": "q04",
+      "question": "How many additional factory jobs, in net terms, did Vietnam create over the three years leading up to the 2017 report?",
+      "filter": null,
+      "latency_s": 1.0106,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p018:c02",
+        "A:ts-2017-12:p018:c01",
+        "A:ts-2017-12:p018:c03",
+        "A:ts-2017-12:p011:c06",
+        "A:ts-2017-12:p011:c05",
+        "A:ts-2017-12:p011:c07",
+        "A:ts-2018-06:p009:c08",
+        "A:ts-2018-06:p009:c07"
+      ],
+      "context_chars": 4490,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p018:c02",
+          "score": 7.145544,
+          "page": 18,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": " growth Real growth 1.8. The economic recovery over the past three years was associated with a pick-up in job creation, especially in manufacturing. Over the past three years Vietnam added 1.6 million new manufacturing jobs (net) - a signif"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p011:c06",
+          "score": 6.754707,
+          "page": 11,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "based welfare gains and poverty reduction. Real disposable household incomes are benefiting from low inflation, an expanding wage sector, and a robust nominal wage growth. Over the last three years, Vietnam added 1.6 million new manufacturi"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p009:c08",
+          "score": 5.801708,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " and lowering the cost of domestic government bonds. Vietnam's dynamic economy continues to create jobs and real wage growth, leading to broad-bases welfare gains and poverty reduction. Job creation remains buoyant with over 670 thousand ne"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p016:c04",
+          "score": 5.740054,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "r of Vietnam GDP growth over the past five years. Over the past five years manufacturing output expanded at average 10.3 percent, annually, and an estimated 1.5 million new manufacturing jobs were added between 2014-16 alone, driven in larg"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p017:c06",
+          "score": 0.604374,
+          "page": 17,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "iner trade (which expanded at a staggering average annual rate of 12.4 percent between 2008 and 2016), Vietnam also developed its connective infrastructure, including seaports and marine terminals. Despite this remarkable success, challenge"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p016:c00",
+          "score": 0.547688,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Recent Economic Developments in Vietnam Coming off strong momentum in 2017, growth accelerated further in the first quarter of 2018 4. Propelled by favorable domestic and external factors, Vietnam's economy posted its strongest first-quarte"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p018:c03",
+          "score": -0.487095,
+          "page": 18,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ors was also buoyant with these sectors together adding another 700,000 jobs. These four sectors together accounted for 80 percent of all jobs created, with the manufacturing sector contributing to more than half of all new jobs between 201"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p016:c03",
+          "score": -0.499384,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "g eleven consecutive quarters of negative growth, mining output recovered modestly to 0.4 percent (from 10 percent contraction in Q1 2017), driven by a pick-up in commodity prices. Figure 4. Sectoral GDP growth (y/y, percent) Figure 5. Cont"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p016:c05",
+          "score": -0.76528,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " Vietnam's GDP . Because manufacturing jobs tend to be more productive -on average output per worker in manufacturing is about 3 times higher than the average in the economy- this has lifted actual (and potential) GDP growth, boosted labor "
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p017:c07",
+          "score": -1.032155,
+          "page": 17,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " newly created jobs in manufacturing are in basic assembly which requires manual labor but does not necessarily add a lot of value (per worker). Linkages between FDI and domestic firms are weak. Moreover, as wages inevitably rise, Vietnam's"
+        }
+      ]
+    },
+    {
+      "query_id": "q05",
+      "question": "How does Vietnam's ratio of road maintenance to total road expenditure compare with OECD countries?",
+      "filter": null,
+      "latency_s": 0.8229,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p039:c04",
+        "A:ts-2017-12:p039:c03",
+        "A:ts-2017-12:p039:c05",
+        "A:ts-2017-12:p014:c01",
+        "A:ts-2017-12:p014:c00",
+        "A:ts-2017-12:p014:c02",
+        "A:ts-2017-12:p046:c04",
+        "A:ts-2017-12:p046:c03"
+      ],
+      "context_chars": 4568,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p039:c04",
+          "score": 7.581922,
+          "page": 39,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "ocated to transport infrastructure maintenance indicate otherwise, with a shortfall of at least 50 percent in the necessary O&M expenditure at both national and local levels. In 2012, maintenance expenditure represented only about 18 percen"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p014:c01",
+          "score": 2.729426,
+          "page": 14,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " the size of each contract; (b) Reduce road maintenance unit costs (currently 3 times higher than in Laos, 1.5 times higher than in Cambodia and closer to unit maintenance unit costs in OECD countries), which is critical particularly when t"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p046:c04",
+          "score": 1.730623,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " Malaysia Lao PDR Myanmar Singapore Indonesia New Zealand Philippines Australia Cambodia Korea Thailand Japan OECD average China Vietnam % of GDP % of GDP Private Public Total expenditure on pharmaceuticals as a share of GDP (2010) Source: "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p047:c03",
+          "score": 0.800723,
+          "page": 47,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "rogress has been made in developing Vietnam's road network. The proportion of paved roads increased from 19 percent in 2004 to more than 50 percent in 2012 and paved road length increased by more than thirty percent in the period 2004-14. H"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p040:c06",
+          "score": 0.616464,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "stliest form of domestic freight transport. Despite this high proportion of total transport investment, road transport costs are still high compared with the rest of the Southeast Asia region and expressway density is one of the lowest in t"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p039:c03",
+          "score": 0.108161,
+          "page": 39,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "tiply by eight times after three years of neglect and by 15 times after five years of neglect. Whilst Vietnam has a complete road network with a relatively high road density (of about 0.87 km of road per km2), the full potential of such a n"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p047:c01",
+          "score": -0.723453,
+          "page": 47,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "r km in the UK and approximately USD4,500 per km in France). This increase in recent years was due to increases in the price of oil and cement based inputs for works construction, and an annual increase of 10 percent in the wages of workers"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p046:c05",
+          "score": -0.852541,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "road subsector in Vietnam. Whilst the initial unit cost of construction in Vietnam is generally comparable to other regions, there are two main elements that increase the costs: land acquisition and the spreading of limited funds over too m"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p040:c01",
+          "score": -0.897017,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "the transport sector: it is recommended to re-allocate capital and recurrent expenditure in the annual and medium-term frameworks to increase road maintenance expenditure to between 20 and 25 percent of total road expenditure (i.e. double i"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p043:c02",
+          "score": -0.994473,
+          "page": 43,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "erages within a few years. 2.20. average public sector wages in Vietnam do not seem particularly low compared with earnings elsewhere in the economy. The ratio of average government employee compensation to GDP per capita in Vietnam is 1.9 "
+        }
+      ]
+    },
+    {
+      "query_id": "q06",
+      "question": "How did the ratio of central to sub-national capital investment change between 2006-10 and the following period?",
+      "filter": null,
+      "latency_s": 0.8704,
+      "first_hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p037:c05",
+        "A:ts-2017-12:p037:c04",
+        "A:ts-2017-12:p037:c06"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p037:c05",
+          "score": 5.401736,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2006-10 to 27:73 in 2011- 154. The change was attributed to rapidly increasing sub-national investment sourced from sub-national budget contingency provisions and over-realized budget revenues (i.e. land and lottery revenues) as well as cen"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p037:c04",
+          "score": 5.247002,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "government spending. However, it remains an important driver of investment in society. Capital investment from the state budget accounted for 29.1 percent of total investment in the economy in the period 2011-15, slightly higher than the 28"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p037:c06",
+          "score": -1.240846,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "government. The 2009- 14 period saw the targeting of mostly local priorities (66 percent in 2010) such as rural roads, small hydro-electric works and other social programs. Sub-national public investment now represents about 40 percent of p"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p039:c08",
+          "score": -3.123241,
+          "page": 39,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " for the recruitment of teachers and doctors. 2.15. The misallocation between capital and recurrent expenditure is also present at the sub-national level. From 2009-12, there was a modest improvement in the transport sector, where maintenan"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p050:c02",
+          "score": -4.003523,
+          "page": 50,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ure 2.12). Sub-national capital spending per capita is comparatively significant at either low or high levels of poverty (Figure 2.13). As a result, sub-national capital spending drives total sub-national spending outcomes related to povert"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p037:c02",
+          "score": -4.346981,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " 29.2 percent of GDP , increasing from 28.4 percent in the period 2006-10. Capital spending was highly prioritized towards infrastructure development. Indeed, it was an important contributor to high economic growth. Recurrent spending prior"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p049:c04",
+          "score": -4.962822,
+          "page": 49,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ovinces with the same effects. 2.30. central government has also supported sub-national spending to address poverty reduction through targeted transfer and matching grant systems. Between 2011-15 there were 61 target transfer schemes 6 and "
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p038:c01",
+          "score": -5.116117,
+          "page": 38,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " coordination. Having such a large share of investment in Vietnam being decided at the sub-national level runs the risk of fragmentation resulting in lower investment efficiency, unless there is strong coordination around large infrastructu"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p038:c00",
+          "score": -5.356859,
+          "page": 38,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2.6. While devolution of public spending was intended to promote local governments to become stronger drivers of growth, the limited remaining share of central government's capital spending raises concerns about adequate investment in natio"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p050:c01",
+          "score": -5.779826,
+          "page": 50,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "udgement on the part of The World Bank concerning the legal status of any territory or the endorsement or acceptance of such boundaries. 2.32. These arrangements have made recurrent spending largely pro-poor and equitable while capital spen"
+        }
+      ]
+    },
+    {
+      "query_id": "q07",
+      "question": "What portion of direct cash transfers goes to the poorest fifth of households, and to the next poorest fifth?",
+      "filter": null,
+      "latency_s": 0.7128,
+      "first_hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p054:c05",
+        "A:ts-2017-12:p054:c04",
+        "A:ts-2017-12:p054:c06",
+        "A:ts-2017-12:p054:c00",
+        "A:ts-2017-12:p054:c01"
+      ],
+      "context_chars": 2855,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p054:c05",
+          "score": 2.497986,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ly distributed, suggesting that targeting of transfers is relatively effective. Analysis of incidence of five direct cash benefits namely (i) an electricity \"subsidy\"; (ii) an emergency food \"subsidy\"; (iii) a \"subsidy\" to low-income govern"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p054:c06",
+          "score": 2.093259,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "e bottom two quintiles, with the poorest quintile receiving 63 percent of all transfers and the second-poorest quintile receiving 19 percent. An exception is contributory public pensions which largely go to the better off. The top quintile "
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p054:c00",
+          "score": -1.527375,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Figure 2.16: concentration and incidence of direct cash transfers and subsidies by quintile Figure 2.17: net fiscal cash contribution by quintile Source: Authors' estimates from VHLSS 2014. Share of total transfers received Welfare Quintile"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p056:c05",
+          "score": -2.466188,
+          "page": 56,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ig, 2016 \"tracks\" the pre-fiscal income of households that become poor (or start poor and are made poorer) following the execution of a set of fiscal policies. Without benefits from public finances services, over 85 percent of the poor popu"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p054:c04",
+          "score": -4.58716,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "icy would be impoverishing. The net cash position of all households is negative as Vietnamese households pay out more in cash or cash equivalents than they receive in cash from the government. This reflects the relatively narrow scope of Vi"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p049:c06",
+          "score": -4.690032,
+          "page": 49,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ces (as demonstrated in Figure 2.10 and Figure 2.11). It can be seen that the poorer provinces, located in the Northern and Western mountainous areas, have benefitted significantly from the transfers (on a per capita basis). The systems inc"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p054:c07",
+          "score": -5.77904,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "cent of government spending on direct transfers other than pensions are received by the bottom 40 percent of the population suggests the government has a relatively effective targeting mechanism in place. This could be used to deliver other"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p055:c00",
+          "score": -6.266771,
+          "page": 55,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Figure 2.18: net fiscal benefit by expenditure and tax type Poorest 20% 2 3 4 Richest 20% Other indirect taxes VAT Other direct taxes Enterprise tax PIT Cash tranfers (incl. social assistance and unemployment benefits) Health and Education "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p056:c06",
+          "score": -6.840475,
+          "page": 56,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "On net, such people lose about 7 percent of their income. When in-kind benefits from utilization public financed services are added, 83 percent of the poor make net welfare gains of about 28 percent and the number of households with a net w"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p056:c07",
+          "score": -6.88245,
+          "page": 56,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "most of the poor are worse-off. Table 2.4: The degree of impoverishment of households resulting from fiscal policy Fiscal impoverishment (Fi) Fiscal gains to the Poor (FgP) From market income (incl. pensions) to: % (post-fiscal income) poor"
+        }
+      ]
+    },
+    {
+      "query_id": "q08",
+      "question": "Which type of public transfer is the exception to the pro-poor distribution of cash benefits?",
+      "filter": null,
+      "latency_s": 0.5742,
+      "first_hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p054:c05",
+        "A:ts-2017-12:p054:c04",
+        "A:ts-2017-12:p054:c06",
+        "A:ts-2017-12:p054:c00",
+        "A:ts-2017-12:p054:c01"
+      ],
+      "context_chars": 2855,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p054:c05",
+          "score": 1.802942,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ly distributed, suggesting that targeting of transfers is relatively effective. Analysis of incidence of five direct cash benefits namely (i) an electricity \"subsidy\"; (ii) an emergency food \"subsidy\"; (iii) a \"subsidy\" to low-income govern"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p054:c06",
+          "score": 0.63061,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "e bottom two quintiles, with the poorest quintile receiving 63 percent of all transfers and the second-poorest quintile receiving 19 percent. An exception is contributory public pensions which largely go to the better off. The top quintile "
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p054:c00",
+          "score": -1.442663,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Figure 2.16: concentration and incidence of direct cash transfers and subsidies by quintile Figure 2.17: net fiscal cash contribution by quintile Source: Authors' estimates from VHLSS 2014. Share of total transfers received Welfare Quintile"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p054:c04",
+          "score": -2.205525,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "icy would be impoverishing. The net cash position of all households is negative as Vietnamese households pay out more in cash or cash equivalents than they receive in cash from the government. This reflects the relatively narrow scope of Vi"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p056:c05",
+          "score": -4.020942,
+          "page": 56,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ig, 2016 \"tracks\" the pre-fiscal income of households that become poor (or start poor and are made poorer) following the execution of a set of fiscal policies. Without benefits from public finances services, over 85 percent of the poor popu"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p056:c06",
+          "score": -5.524824,
+          "page": 56,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "On net, such people lose about 7 percent of their income. When in-kind benefits from utilization public financed services are added, 83 percent of the poor make net welfare gains of about 28 percent and the number of households with a net w"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p049:c01",
+          "score": -6.989598,
+          "page": 49,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "es in how the poor and rich access and utilize services and accumulate human capital, with significant implications for social mobility. An important policy consideration then, is whether fiscal policy leaves society more unequal, or makes "
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p055:c00",
+          "score": -7.074523,
+          "page": 55,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Figure 2.18: net fiscal benefit by expenditure and tax type Poorest 20% 2 3 4 Richest 20% Other indirect taxes VAT Other direct taxes Enterprise tax PIT Cash tranfers (incl. social assistance and unemployment benefits) Health and Education "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p054:c03",
+          "score": -7.484454,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ouseholds from a position of being net payers to a position of being net recipients. Only for the richest quintile do the benefits created from public spending on in-kind services amount to less that amounts paid in taxes. The fiscal net be"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p060:c00",
+          "score": -7.602959,
+          "page": 60,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2.52. as Vietnam moves further towards market-based service pricing, improved and timely targeting practices should be adopted to mitigate the risk of increasing inequity in access to basic services. The Government has prioritized support t"
+        }
+      ]
+    },
+    {
+      "query_id": "q09",
+      "question": "How fast did Vietnam's real GDP grow in the first quarter of 2018?",
+      "filter": null,
+      "latency_s": 0.5295,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p016:c00",
+        "A:ts-2018-06:p016:c01",
+        "A:ts-2018-06:p009:c01",
+        "A:ts-2018-06:p009:c00",
+        "A:ts-2018-06:p009:c02",
+        "A:ts-2017-12:p017:c02",
+        "A:ts-2017-12:p017:c01",
+        "A:ts-2017-12:p017:c03"
+      ],
+      "context_chars": 4565,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p016:c00",
+          "score": 8.873335,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "Recent Economic Developments in Vietnam Coming off strong momentum in 2017, growth accelerated further in the first quarter of 2018 4. Propelled by favorable domestic and external factors, Vietnam's economy posted its strongest first-quarte"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p009:c01",
+          "score": 7.32355,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "advanced economies runs its course. Growth in the East Asia and Pacific (EAP) region is expected to moderate slightly to 6.3 percent in 2018 and then 6.1 percent on average in 2019-2020, largely reflecting a continued structural slowdown in"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p017:c02",
+          "score": 4.933185,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": ". Recent Economic Developments in Vietnam Aided by favorable external and domestic conditions, Vietnam's economy gathered momentum 1.4. Vietnam's economy gathered further momentum in 2017 reflecting strong domestic demand, robust export-ori"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p010:c00",
+          "score": 4.822843,
+          "page": 10,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Medium-term outlook, risks, and policy implications Vietnam's medium-term outlook has improved further since the last Taking Stock release in December 2017. Real GDP is now projected to expand by 6.8 percent in 2018 (up from 6.5 percent in "
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p010:c01",
+          "score": 4.44805,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ext, developing East Asia and the Pacific continued to perform well in 2017, with GDP growth in the region projected to pick up to 6.4 percent this year, bolstered by resilient domestic demand and accelerating exports, which benefited from "
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p009:c02",
+          "score": 4.311364,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "t (y/y) during the first quarter of 2018. Buoyant external demand further lifted Vietnam's export-oriented manufacturing and agricultural sectors which expanded by 13.6 percent and 4.1 percent, respectively. Meanwhile, robust domestic deman"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p009:c03",
+          "score": 3.441035,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " growth, driven by a FDI and private-sector-led recovery in investment and an ongoing shift of labor from agriculture into more productive manufacturing and service sectors. Vietnam's external position continued to improve owing to strong t"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p022:c02",
+          "score": 3.42843,
+          "page": 22,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "trade performance, remittances and FDI inflows, the external position continued to strengthen 12. Vietnam's export performance continues to be exceptionally strong, supported by robust export-oriented foreign-invested manufacturing output a"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p031:c04",
+          "score": 2.770208,
+          "page": 31,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ain commodities will see a gradual reduction to zero percent by 2022. Source: WTO. Medium-Term Economic Outlook, Risks, Policy Implications 26. Vietnam's medium-term outlook has improved further since the last Taking Stock release in Decemb"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p017:c03",
+          "score": 2.740971,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "third quarter, bringing y/y growth to 6.4 percent for the first nine months of the year. Low inflation and strengthening consumer confidence supported an uptick in private consumption while investment was bolstered by robust foreign direct "
+        }
+      ]
+    },
+    {
+      "query_id": "q10",
+      "question": "What credit growth and inflation targets did the State Bank of Vietnam set for 2018?",
+      "filter": null,
+      "latency_s": 0.5821,
+      "first_hit_rank": 5,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "context_evidence": false,
+      "context_ids": [
+        "A:ts-2017-12:p010:c04",
+        "A:ts-2017-12:p010:c03",
+        "A:ts-2017-12:p010:c05",
+        "A:ts-2017-12:p022:c01",
+        "A:ts-2017-12:p022:c00",
+        "A:ts-2017-12:p022:c02",
+        "A:ts-2018-06:p009:c05",
+        "A:ts-2018-06:p009:c04"
+      ],
+      "context_chars": 4566,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p010:c04",
+          "score": 6.702698,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "nflation of 1.3 percent (y/y) in October. Taking advantage of subdued inflation, the State Bank of Vietnam in July cut its rediscount rate and refinancing rate by 25 basis points to 4.25 and 6.25 percent respectively. Credit growth remained"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p022:c01",
+          "score": 3.932966,
+          "page": 22,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "al credit output Ratio is rising 1.14. amidst subdued price pressures, the authorities have proactively eased the monetary policy stance to support economic growth. With moderate inflation, the State Bank of Vietnam in July eased monetary s"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p009:c05",
+          "score": 3.701336,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "he backdrop of low inflation, monetary policy remains accommodative. Vietnam's consumer price index has been ticking up slightly 2.8 percent (y/y) in the first four months of 2018, driven by hikes in administered prices (for electricity and"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p021:c02",
+          "score": 3.18871,
+          "page": 21,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "s, below the estimate of 18.2 percent cumulative credit growth in 2017 (figure 17). Vietnam credit cycle stands out from trends in most other countries of the region, including China, which have seen gradual tightening. Vietnam's overall cr"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p020:c05",
+          "score": 2.098851,
+          "page": 20,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": " and increasing environmental costs. 9. Against the backdrop of moderate inflationary pressures, monetary policy remains accommodative. Monetary policy targets for 2018 continue to aim at ensuring SBV's dual focus of maintaining stability w"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p026:c05",
+          "score": 1.813154,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rsed in recent months as U.S. dollar has shown tentative signs of a recovery. Meanwhile, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion3 in the first four month of 2018, more than twice the nominal "
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p020:c01",
+          "score": 1.635291,
+          "page": 20,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "services). Headline CPI rose by 2.8 percent (y/y) in April 2018, up slightly from 2.6 percent in December 2017. However, core inflation slightly declined from 1.4 percent in to 1.3 percent during the same period. It is noteworthy that Vietn"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p017:c03",
+          "score": 1.177718,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "third quarter, bringing y/y growth to 6.4 percent for the first nine months of the year. Low inflation and strengthening consumer confidence supported an uptick in private consumption while investment was bolstered by robust foreign direct "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p020:c00",
+          "score": 0.900186,
+          "page": 20,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Source: GSO. Figure 14. Consumer price index (percent) Apr 12 Apr 13 Apr 14 Apr 15 Apr 16 Apr 17 Apr 18 Headline Food Core Against the backdrop of low inflation, monetary policy remains supportive of growth 8. Despite a recent uptick in hea"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p011:c08",
+          "score": -0.981028,
+          "page": 11,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " (US$1.90 per day). Medium-term outlook, risks, and policy implications Vietnam's near-term outlook has improved since the July Taking stock report. Aided by favorable external and domestic conditions, GDP growth is now projected to acceler"
+        }
+      ]
+    },
+    {
+      "query_id": "q11",
+      "question": "How much foreign direct investment was actually disbursed in Vietnam in 2017?",
+      "filter": null,
+      "latency_s": 0.5534,
+      "first_hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p028:c03",
+        "A:ts-2017-12:p028:c02",
+        "A:ts-2017-12:p028:c04",
+        "A:ts-2018-06:p026:c01",
+        "A:ts-2018-06:p026:c00",
+        "A:ts-2018-06:p026:c02"
+      ],
+      "context_chars": 3073,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p028:c03",
+          "score": 8.268841,
+          "page": 28,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "gn investors committed US$ 28 billion to Vietnam - a 37 percent increase compared to the same period last year. It is worth to note that the commitment reached the highest level since its peak of 2008. At the same time, foreign-invested fir"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p026:c01",
+          "score": 7.977367,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "accelerated in 2017 and in the first quarter of 2018. Recently concluded trade agreements-such as the Comprehensive and Progressive Trans-Pacific Partnership (CPTPP) and EU Vietnam Free Trade Agreement (EV-FTA)- have further boosted investo"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p026:c02",
+          "score": 7.419271,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "er of 2018, FDI disbursement were sustained at the 7.2 percent growth rate achieved over the same period in 2017. Currently, the foreign-invested sector contributes about a fifth of Vietnam's GDP , 26.5 percent of total investment, 72 perce"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p028:c02",
+          "score": 5.54042,
+          "page": 28,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " index: This indicator is a measure of the dispersion of trade value across trading partners. A higher index indicates that trade (imports and exports) are concentrated in fewer markets, whereas a country trading equally with all partners w"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p026:c03",
+          "score": 3.873002,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ng restrictions on foreign equity participation. Foreign investors injected about US$650 million in the form of equity investment (purchase of shares and capital contribution) in Vietnamese businesses in the first quarter of 2018-five times"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p026:c05",
+          "score": 3.654942,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rsed in recent months as U.S. dollar has shown tentative signs of a recovery. Meanwhile, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion3 in the first four month of 2018, more than twice the nominal "
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p024:c02",
+          "score": 2.80674,
+          "page": 24,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " 64.5 11.5 20.4 Source: General Department of Customs. 1.18. Despite improved export performance of the domestic sector in 2017, exports continue to be dominated by the FDi sector. Vietnam's exports continue to gain global market share, in "
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p021:c00",
+          "score": 1.977301,
+          "page": 21,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2005 2008 2011 2014 2017e Total invesment Gross capital formation Gross national savings 2005 2008 2011 2014 9M-17 StateForeign Non-state Total Source: GSO, WB and IMF . 1.12. investment growth is recovering gradually with rebalancing towar"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p010:c07",
+          "score": 1.661132,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ar. Import growth also rebounded in 2017, driven by a surge in imports of capital and intermediate goods, which in turn reflect buoyant investment and high import content, especially of Vietnam's manufacturing exports. The current account p"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p029:c01",
+          "score": 1.297694,
+          "page": 29,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "HS) 2012 2013 2014 2015 2016e 2017f Current account Capital account Source: GSO Source: SBV and WB estimates. 3 Data provided by SBV percent of Vietnam's GDP , nearly a quarter of total investment, two thirds of total exports, 18.5 percent "
+        }
+      ]
+    },
+    {
+      "query_id": "q12",
+      "question": "How long does documentary compliance for imports take in Vietnam compared with the ASEAN-4 average?",
+      "filter": null,
+      "latency_s": 0.5764,
+      "first_hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p039:c02",
+        "A:ts-2018-06:p039:c01",
+        "A:ts-2018-06:p039:c03",
+        "A:ts-2018-06:p054:c03",
+        "A:ts-2018-06:p054:c02",
+        "A:ts-2018-06:p054:c04"
+      ],
+      "context_chars": 3122,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p039:c02",
+          "score": 8.574876,
+          "page": 39,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ort from Vietnam (56 hours) is equal to the ASEAN-4 average. Vietnam's time to export, both in terms of documentary compliance (50 hours) and border compliance (55 hours), is significantly higher than ASEAN-4 average (24 hours and 37 hours,"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p039:c01",
+          "score": 8.257981,
+          "page": 39,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "te. 12. Vietnam's trade competitiveness in terms of time to trade remains behind peer economies in the region, particularly compared with the average of the ASEAN-4 (including Singapore, Malaysia, Thailand, and the Philippines). Figure 3 on"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p054:c03",
+          "score": 5.289446,
+          "page": 54,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "dicators are significantly different: while the time for border compliance in Vietnam is reached the ASEAN-4 average level, there remains a considerable gap in the time for documentary compliance on specialized controls between Vietnam and "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p039:c03",
+          "score": 4.732504,
+          "page": 39,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "h Vietnam's imports and exports are higher than the ASEAN-4 average (Figure 4). Further, compared with the ASEAN-4 averages, Vietnam's border compliance cost to import is higher, but its border compliance cost to export is lower. Figure 3. "
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p054:c02",
+          "score": 4.430203,
+          "page": 54,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "to monitor results achieved in meeting this objective. Figure 23 shows the trade competitiveness gap between Vietnam and the ASEAN-4 average during for the Doing Business reports from 2016 through 2018. Over this period, there has been a de"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p039:c04",
+          "score": 3.372737,
+          "page": 39,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ort: Border compliance (hours) Time to Import: Documentary compliance (hours) ASEAN-4 Average Vietnam Cost to Export: Border compliance (USD) Cost to Export: Documentary Compliance (USD) Cost to Import: Border compliance (USD) Cost to Impor"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p055:c04",
+          "score": 3.000696,
+          "page": 55,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "sments by 1,000 international freight forwarders and express carriers. 19 The East Asia & Pacific regional average only captures developing countries in the region. No rank is indicated in the graph. Border Compliance to Import (Hour) Vietn"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p041:c03",
+          "score": 2.268346,
+          "page": 41,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "her detail, the total time to export consists of documentary compliance time (40 percent), customs procedure time (4 percent), non-customs procedures time (6 percent), domestic transport time (6 percent), and port handling process time (44 "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p054:c01",
+          "score": 2.139376,
+          "page": 54,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "r Compliance Time and Cost for Export Source: Doing Business, World Bank (2016, 2017 and 2018). 47. Doing Business reports can also be used to benchmark Vietnam against peer countries, and therefore support a monitoring of the performance g"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p011:c05",
+          "score": 1.051213,
+          "page": 11,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "costs to imports should be prioritized. The Government of Vietnam has focused on progressive improvement of the business environment and competitiveness to reach the level of ASEAN-4 average by 2020. Reducing costs of border compliance and "
+        }
+      ]
+    },
+    {
+      "query_id": "q13",
+      "question": "What proportion of the total cost of importing into Vietnam comes from logistics such as domestic transport and port handling?",
+      "filter": null,
+      "latency_s": 0.8289,
+      "first_hit_rank": 3,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p041:c03",
+        "A:ts-2018-06:p041:c02",
+        "A:ts-2018-06:p041:c04",
+        "A:ts-2018-06:p041:c01",
+        "A:ts-2018-06:p041:c00"
+      ],
+      "context_chars": 2855,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p041:c03",
+          "score": 6.272042,
+          "page": 41,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "her detail, the total time to export consists of documentary compliance time (40 percent), customs procedure time (4 percent), non-customs procedures time (6 percent), domestic transport time (6 percent), and port handling process time (44 "
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p041:c01",
+          "score": 6.094839,
+          "page": 41,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "e border, which account for 36 percent (Figure 6). The costs of port handling are the highest cost item (39.5 percent). In further detail, the total cost to import includes documentary compliance cost (25 percent), customs procedures cost ("
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p041:c00",
+          "score": 4.778242,
+          "page": 41,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "(55 percent), customs procedures time (11 percent), time for non-customs clearance procedures (6 percent), domestic transport time (5 percent), and port handling time (23 percent). 19. The breakdown of the monetary costs to import shows tha"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p011:c04",
+          "score": 4.534373,
+          "page": 11,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "t of the total time to export), whilst the highest monetary cost component again is for port handling (33 percent of the total cost to export). High time and monetary costs of port handling are caused mainly from extended inventory due to d"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p024:c02",
+          "score": 3.61144,
+          "page": 24,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "an estimated 5.8 percent of total exports of goods and services. Similarly, imports (payments) of commercial services rose 1.6 percent and accounted for an estimated 9.8 percent of the total of imports of goods and services. In 2017, receip"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p011:c03",
+          "score": 3.492211,
+          "page": 11,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "liance with specialized control regulations, border clearance procedures, port handling, transport and logistics. Costs analysis shows that for imports, the regulatory compliance with specialized controls is the most time-consuming complian"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p041:c04",
+          "score": 3.195857,
+          "page": 41,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "unt for 63 percent of the total cost, regulatory compliance costs including documentary compliance, customs and non-customs procedures compliance, account for only 37 percent of the total costs (Figure 8). Port handling is the most costly s"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p042:c02",
+          "score": 3.124885,
+          "page": 42,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " costs are coming from port handling; and, (b) for exports, the highest time and costs are coming from port handling (Figure 9). High costs of port handling is mainly from delays and extra inventory at port related to extended time of borde"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p027:c02",
+          "score": 2.30742,
+          "page": 27,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ure export potential of Vietnam. Table 1.3: Vietnam's merchandise imports share of total (%) growth (%, y/y) 2016 10M-17 2016 10M-17 Total import value 100.0 100.0 5.4 21.6 Petroleum 3.5 4.0 -11.4 40.5 Machinery and equipment 16.2 16.2 2.9 "
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p040:c06",
+          "score": 2.270105,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "stliest form of domestic freight transport. Despite this high proportion of total transport investment, road transport costs are still high compared with the rest of the Southeast Asia region and expressway density is one of the lowest in t"
+        }
+      ]
+    },
+    {
+      "query_id": "q14",
+      "question": "What was Vietnam's total public debt in 2017 as a share of GDP?",
+      "filter": {
+        "edition": "2017-12"
+      },
+      "latency_s": 0.6007,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p032:c00",
+        "A:ts-2017-12:p032:c01",
+        "A:ts-2017-12:p011:c02",
+        "A:ts-2017-12:p011:c01",
+        "A:ts-2017-12:p011:c03",
+        "A:ts-2017-12:p036:c00",
+        "A:ts-2017-12:p036:c01"
+      ],
+      "context_chars": 3997,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p032:c00",
+          "score": 8.435593,
+          "page": 32,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "1.28. The reduction in budget deficit contained public debt accumulation. Vietnam's total public debt increased markedly by nearly 12 percentage points of GDP from 50.8 percent in 2012 to an estimated 62.6 percent3 in 2017, approaching Viet"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p011:c02",
+          "score": 3.936913,
+          "page": 11,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "cumulation and ensuring compliance with 65 percent of the GDP statutory debt limit. On the revenue side, deficit reduction was aided by buoyant revenue performance. On the spending side, the adjustment has fallen disproportionately on publi"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p036:c00",
+          "score": 3.34905,
+          "page": 36,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Taking sTock An Update on Vietnam's Recent Economic Developments36 improving spending Efficiency for sustainable growth 2.1. With public debt close to the statutory limit of 65 percent of gDP , Vietnam's government faces tight budget constr"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p013:c00",
+          "score": 3.098396,
+          "page": 13,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "special Topic With public debt close to the statutory limit of 65 percent of gDP , Vietnam's government faces tight budget constraints for several years to come. The Government has already responded by curtailing expenditure growth, especia"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p012:c00",
+          "score": 3.087091,
+          "page": 12,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "Externally, Vietnam is projected to retain a current account surplus, albeit at a lower level due a sustained recovery in imports. This year's fiscal deficit is on track to come in at around 4 percent below the government's target of 4.8 pe"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p010:c06",
+          "score": 2.960782,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "th. Vietnam's balance of payments remains in surplus, underpinned by a trade surplus, resilient remittances, and large FDi inflows. Improved external demand helped lift Vietnam's already strong export performance. Underpinned by broad-based"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p029:c01",
+          "score": 2.925232,
+          "page": 29,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "HS) 2012 2013 2014 2015 2016e 2017f Current account Capital account Source: GSO Source: SBV and WB estimates. 3 Data provided by SBV percent of Vietnam's GDP , nearly a quarter of total investment, two thirds of total exports, 18.5 percent "
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p042:c05",
+          "score": 0.759649,
+          "page": 42,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " countries (Figure 2.5). Its share of GDP (6.5 percent on average during 2009- 12) is about the same as that in Mongolia, but twice as high as that in Indonesia and the Republic of Korea and three times higher than that in Singapore. On ave"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p042:c04",
+          "score": 0.582809,
+          "page": 42,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " percent), growth in non-base salaries and allowances have been the main drivers of salary increases (Figure 2.4). Growth in spending at both central and sub-national levels was especially strong in 2011 and 2012, when a large number of pri"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p046:c04",
+          "score": 0.453633,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " Malaysia Lao PDR Myanmar Singapore Indonesia New Zealand Philippines Australia Cambodia Korea Thailand Japan OECD average China Vietnam % of GDP % of GDP Private Public Total expenditure on pharmaceuticals as a share of GDP (2010) Source: "
+        }
+      ]
+    },
+    {
+      "query_id": "q15",
+      "question": "What record level did Vietnam's foreign reserves reach according to the report?",
+      "filter": {
+        "edition": "2018-06"
+      },
+      "latency_s": 0.6285,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p026:c05",
+        "A:ts-2018-06:p026:c04",
+        "A:ts-2018-06:p026:c06",
+        "A:ts-2018-06:p026:c03",
+        "A:ts-2018-06:p026:c02",
+        "A:ts-2018-06:p028:c03",
+        "A:ts-2018-06:p028:c02",
+        "A:ts-2018-06:p028:c04"
+      ],
+      "context_chars": 4420,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p026:c05",
+          "score": 7.380959,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "rsed in recent months as U.S. dollar has shown tentative signs of a recovery. Meanwhile, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion3 in the first four month of 2018, more than twice the nominal "
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p026:c03",
+          "score": -1.698669,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ng restrictions on foreign equity participation. Foreign investors injected about US$650 million in the form of equity investment (purchase of shares and capital contribution) in Vietnamese businesses in the first quarter of 2018-five times"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p028:c03",
+          "score": -2.498644,
+          "page": 28,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " MOF , World Bank and IMF . Thanks to a continued adjustment in the fiscal position, public debt stabilized in 2017 22. Vietnam's fiscal stance improved further in 2017. The overall fiscal deficit is estimated to have narrowed to an estimat"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p026:c01",
+          "score": -2.962061,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "accelerated in 2017 and in the first quarter of 2018. Recently concluded trade agreements-such as the Comprehensive and Progressive Trans-Pacific Partnership (CPTPP) and EU Vietnam Free Trade Agreement (EV-FTA)- have further boosted investo"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p055:c03",
+          "score": -3.086915,
+          "page": 55,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " to track and trace consignments, and (vi) Timeliness of delivery. 49. Vietnam's performance is slightly below the unweighted ASEAN 4 average (3.13 versus 2.99), and is on par with the East Asia & Pacific regional average 19 (Figure 24). Th"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p054:c03",
+          "score": -3.278421,
+          "page": 54,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "dicators are significantly different: while the time for border compliance in Vietnam is reached the ASEAN-4 average level, there remains a considerable gap in the time for documentary compliance on specialized controls between Vietnam and "
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p022:c02",
+          "score": -3.287536,
+          "page": 22,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "trade performance, remittances and FDI inflows, the external position continued to strengthen 12. Vietnam's export performance continues to be exceptionally strong, supported by robust export-oriented foreign-invested manufacturing output a"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p009:c03",
+          "score": -3.558569,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " growth, driven by a FDI and private-sector-led recovery in investment and an ongoing shift of labor from agriculture into more productive manufacturing and service sectors. Vietnam's external position continued to improve owing to strong t"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p027:c00",
+          "score": -3.747136,
+          "page": 27,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Figure 25. Dong/US$ exchange rate Figure 26. International reserves Source: World Bank. Source: SBV, IMF and World Bank. Q1-13 Q1-14 Q1-15 Q1-16 Q1-17 4M-18 Reserves (accumulated, US$ billion, LHS) Import covers (month, RHS) Jan 16 May 16 S"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p023:c02",
+          "score": -3.806314,
+          "page": 23,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ment declined 8.9 percent in the first four months of 2018 compared with the same period last year - largely by foreign firms' contraction of 15 percent, reflecting high statistical base effects and fluctuations due to the lumpiness of inve"
+        }
+      ]
+    }
+  ]
+}
