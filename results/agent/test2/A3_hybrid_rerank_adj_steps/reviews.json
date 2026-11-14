@@ -1,0 +1,61 @@
+[
+  {
+    "query_id": "t01",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "43% of total health spending in 2010, exactly p45 c08 (GDP share/OECD comparison omitted, not asked).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "t02",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "2.9% in 2017 and 4.1% in Q1 2018 after the 2016 drought, exactly p19 c03.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "t03",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "26% local / 9% community, exactly p49 c05. \"2011-15\" comes from the preceding chunk context (c04 \"between 2011-15\"), consistent with the source.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "t04",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "7.4% in 2018 at US$3.2/day, edition 2018-06 filter, exactly p32 c03.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "t05",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Approximately 89% of the public transport budget, exactly p40 c05.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "u05",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "Abstained after 4 lending-rate searches; no rate invented (credit-growth/interbank passages not misused).",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "query_id": "u06",
+    "abstention_correct": true,
+    "citation_support": [],
+    "reason": "Abstained; did not misuse the Jan-Oct 2017 \"10.5 million tourist entries\" distractor as a Q1-2018 figure.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  }
+]

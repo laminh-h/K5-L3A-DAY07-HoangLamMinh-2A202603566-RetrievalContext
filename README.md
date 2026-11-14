@@ -5,7 +5,7 @@
 Agent Gemini (`gemini-3.5-flash-lite`, function calling) tìm bằng chứng trong kho Day 6: 2 báo cáo World Bank *Taking Stock* 12/2017 và 06/2018 (CC BY 3.0 IGO), 618 chunk, Chroma, MiniLM 384 chiều. Agent trả lời kèm citation hoặc từ chối.
 
 - 4 phương pháp retrieval: dense trên Chroma Day 6, BM25, hybrid RRF, hybrid + cross-encoder rerank.
-- Benchmark 24 câu: dev 15+2, test 5+2.
+- Benchmark 24 câu: dev 15+2, test 5+2; thêm test2 độc lập 5+2, viết sau khi chốt cấu hình.
 - Báo cáo: [report/individual/2A202603566_HoangLamMinh.md](report/individual/2A202603566_HoangLamMinh.md).
 
 **Ghi nguồn dữ liệu:** World Bank. 2017. *Taking Stock, December 2017* (https://hdl.handle.net/10986/29032) và World Bank. 2018. *Taking Stock, June 2018* (https://hdl.handle.net/10986/29959). License: CC BY 3.0 IGO. `data/chunks.json` là text trích xuất đã chuẩn hóa từ Day 6, không phải bản chính thức của World Bank.
@@ -29,6 +29,7 @@ $PY -X utf8 -m day7.review_sheet --split dev --config A1_dense       # bảng đ
 # sau khi chốt configs/selected.json:
 $PY -X utf8 -m day7.eval_retrieval --split test           # chỉ cho phép R1 và R4
 $PY -X utf8 -m day7.run_agent_bench --config A3_hybrid_rerank_adj_steps --split test
+# test2 = bộ test độc lập viết sau khi chốt cấu hình (thay --split test bằng --split test2 ở 3 lệnh trên)
 $PY -X utf8 starter/agent_metrics.py --cases data/cases.json --traces results/agent/test/A3_hybrid_rerank_adj_steps/traces.json --reviews results/agent/test/A3_hybrid_rerank_adj_steps/reviews.json --split test --output results/agent/test/A3_hybrid_rerank_adj_steps/summary.json
 ```
 

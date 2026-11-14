@@ -1,0 +1,82 @@
+[
+  {
+    "config": "A1_dense",
+    "query_id": "t01",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "t02",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "t03",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "t04",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A1_dense",
+    "query_id": "t05",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "t01",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "t02",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "t03",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "t04",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  },
+  {
+    "config": "A3_hybrid_rerank_adj_steps",
+    "query_id": "t05",
+    "context_grade": 2,
+    "auto_strict_gold_in_context": true,
+    "reason": "Gold chunk in final context with source/page.",
+    "labeller": "AI draft (Claude Code) after reading answer + full cited chunk text vs gold; to be re-read by the student"
+  }
+]

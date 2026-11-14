@@ -1,0 +1,562 @@
+{
+  "config": "R4_hybrid_rerank",
+  "method": "hybrid+rerank",
+  "use_filter": true,
+  "context_k": 3,
+  "budget_chars": 2400,
+  "neighbor_window": 0,
+  "hypothesis": "A cross-encoder reading query and chunk jointly fixes ranking errors where the topic sentence outranks the chunk with the number (Day 6 q08, q20).",
+  "N": 5,
+  "hit_at_1": "5/5",
+  "evidence_hit_at_3": "5/5",
+  "mrr_at_10": 1.0,
+  "recall_at_10": "5/5",
+  "context_evidence_rate": "5/5",
+  "avg_context_chars": 1702,
+  "retrieval_latency_ms_per_query": 719.3,
+  "cost_usd": 0.0,
+  "traces": [
+    {
+      "query_id": "t01",
+      "question": "In 2010, what share of total health spending in Vietnam went on medicines?",
+      "filter": null,
+      "latency_s": 0.6473,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p045:c08",
+        "A:ts-2017-12:p046:c00",
+        "A:ts-2017-12:p046:c04"
+      ],
+      "context_chars": 1656,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p045:c08",
+          "score": 4.85623,
+          "page": 45,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "reliance on hospital centered service delivery at the central and provincial levels, instead of grassroots based and preventive health care; and high pharmaceutical spending. Spending on medicines in 2010 was 43 percent of total health spen"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p046:c00",
+          "score": 2.082204,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "comprise 60 percent of total reimbursements from health insurance. Decentralized procurement has led to a variation in prices across provinces. For instance, claims data from the Vietnam Social Security Fund (VSSF) in 2010 indicated up to a"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p046:c04",
+          "score": 1.890971,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " Malaysia Lao PDR Myanmar Singapore Indonesia New Zealand Philippines Australia Cambodia Korea Thailand Japan OECD average China Vietnam % of GDP % of GDP Private Public Total expenditure on pharmaceuticals as a share of GDP (2010) Source: "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p046:c03",
+          "score": 0.755862,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "a shift away from fee-for-service reimbursement to other health financing arrangements including relevant diagnosis related group (DRG) and case based payment. Figure 2.9: Vietnam's pharmaceutical spending is high relative to peer countries"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p037:c06",
+          "score": -1.020657,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "government. The 2009- 14 period saw the targeting of mostly local priorities (66 percent in 2010) such as rural roads, small hydro-electric works and other social programs. Sub-national public investment now represents about 40 percent of p"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p059:c02",
+          "score": -1.11612,
+          "page": 59,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "t Asian countries, which makes the poor and the near poor more vulnerable when facing catastrophic health problems. As reported in a 2012 survey , 2.5 percent of households (about 2 million people) in Vietnam were impoverished due to OOP ex"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p057:c03",
+          "score": -1.831725,
+          "page": 57,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2012 for private spending; authors' estimate for public spending based on data from MoF/GSO. Preprimary Primary Public spending Per student spending (VND '000) Lower Secondary Upper Secondary Household Figure 2.22: The share of public spend"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p045:c07",
+          "score": -2.827169,
+          "page": 45,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "re, reforms in the curricula and improved textbooks and testing methods are also important to enhance spending efficiency and effectiveness in the sector. - In the health sector, Vietnam has a very high level of health spending relative to "
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p054:c01",
+          "score": -4.85069,
+          "page": 54,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "41. What makes Vietnam's fiscal policy pro-poor, and a net positive contributor to household welfare, is government spending on public service provision. All households but those in the richest quintile, have a net positive value position, "
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p059:c00",
+          "score": -5.11155,
+          "page": 59,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2.49. Various concerns about equity in the health sector highlight how costs are a barrier to equal access to high quality care. Health financing policy in Vietnam in principle favors poorer provinces and the poor. 10 However, in practice, "
+        }
+      ]
+    },
+    {
+      "query_id": "t02",
+      "question": "After the 2016 drought and salinity intrusion, how quickly did Vietnam's agriculture, forestry and fishery sector recover?",
+      "filter": null,
+      "latency_s": 0.6922,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p019:c03",
+        "A:ts-2017-12:p018:c00",
+        "A:ts-2018-06:p019:c02"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p019:c03",
+          "score": 5.244202,
+          "page": 19,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": ". The sector experienced strong recovery since it was hit by a severe drought and salinity intrusion in the early 2016, causing the growth to decline to the lowest level in a decade. Growth returned remarkably to 2.9 percent in 2017 and con"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p018:c00",
+          "score": 0.367558,
+          "page": 18,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "1.6. The agricultural sector also rebounded gradually from the severe drought last year. Agricultural output expanded by 2.8 percent (y/y) in the first nine months 2017 compared to 0.6 percent during the same time of 2016. The fishery sub-s"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p019:c02",
+          "score": -0.62804,
+          "page": 19,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "o raised labor productivity growth. Figure 11. Labor productivity growth (percent) Source:GSO and WB estimates. 2011 2012 2013 2014 2015 2016 2017e Box 2: Unleashing the full potential of Vietnam's Agriculture Sector After relatively weak a"
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p010:c02",
+          "score": -1.003296,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "percent (y/y) during the first nine months of the year. Domestic demand and especially private consumption remained buoyant, fueled by low inflation and rising real wages. At the same time, the recovery in external demand helped Vietnam's e"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p010:c03",
+          "score": -1.438329,
+          "page": 10,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ion. Agriculture also continued to recover from last year's drought, expanding by 2.8 percent during first three quarters. Reflecting robust domestic consumption as well as strong performance of the tourism sector, the services sector expan"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p019:c04",
+          "score": -2.135936,
+          "page": 19,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "y aquaculture farming. Strong domestic and external demand helped to boost the agriculture and fishery output in 2017 and the first quarter 2018. Export value of agriculture key products (rice, cashew nut, vegetables, fruits and aquaculture"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p009:c03",
+          "score": -3.234398,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " growth, driven by a FDI and private-sector-led recovery in investment and an ongoing shift of labor from agriculture into more productive manufacturing and service sectors. Vietnam's external position continued to improve owing to strong t"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p017:c02",
+          "score": -4.032166,
+          "page": 17,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": ". Recent Economic Developments in Vietnam Aided by favorable external and domestic conditions, Vietnam's economy gathered momentum 1.4. Vietnam's economy gathered further momentum in 2017 reflecting strong domestic demand, robust export-ori"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p020:c03",
+          "score": -5.625791,
+          "page": 20,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ruits and vegetables and higher value cash crops experienced stronger growth. Nevertheless, there are remaining challenges related to the quality and sustainability of Vietnam's agricultural growth and related patterns of development. A com"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p022:c02",
+          "score": -6.04804,
+          "page": 22,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "trade performance, remittances and FDI inflows, the external position continued to strengthen 12. Vietnam's export performance continues to be exceptionally strong, supported by robust export-oriented foreign-invested manufacturing output a"
+        }
+      ]
+    },
+    {
+      "query_id": "t03",
+      "question": "Besides central authorities, what shares of National Target Program funding came from local authorities and from community contributions?",
+      "filter": null,
+      "latency_s": 0.6051,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p049:c05",
+        "A:ts-2017-12:p038:c00",
+        "A:ts-2017-12:p049:c04"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p049:c05",
+          "score": 5.094931,
+          "page": 49,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "aining (17 percent); and Development of a New Rural Life (29 percent). During the period, approximately 56 percent of funding for all NTPs came from central authorities; 26 percent from local authorities; 5 percent from external donors; 4 p"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p038:c00",
+          "score": -0.837502,
+          "page": 38,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2.6. While devolution of public spending was intended to promote local governments to become stronger drivers of growth, the limited remaining share of central government's capital spending raises concerns about adequate investment in natio"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p049:c04",
+          "score": -0.869502,
+          "page": 49,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ovinces with the same effects. 2.30. central government has also supported sub-national spending to address poverty reduction through targeted transfer and matching grant systems. Between 2011-15 there were 61 target transfer schemes 6 and "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p037:c06",
+          "score": -2.359677,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "government. The 2009- 14 period saw the targeting of mostly local priorities (66 percent in 2010) such as rural roads, small hydro-electric works and other social programs. Sub-national public investment now represents about 40 percent of p"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p038:c03",
+          "score": -5.103931,
+          "page": 38,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "account in project approvals. For instance, between 2001-08 the budget allocation only met 61 percent of the total cost of projects approved by the central government. Consequently, the annual allocation for each project was too low and man"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p037:c07",
+          "score": -5.580678,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "has provided strong incentives for development at sub-national level and contributed to the development of rural infrastructure such local roads, clean water systems and the improvement of local education and health services."
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p049:c07",
+          "score": -5.760614,
+          "page": 49,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ure investment (e.g. dykes, research and development centers); economic development programs in the East Sea islands and border areas; and investments in provincial and district hospitals. 8 GOV report to the National Assembly on implementa"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p037:c05",
+          "score": -5.762661,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "2006-10 to 27:73 in 2011- 154. The change was attributed to rapidly increasing sub-national investment sourced from sub-national budget contingency provisions and over-realized budget revenues (i.e. land and lottery revenues) as well as cen"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p053:c08",
+          "score": -5.886006,
+          "page": 53,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "es. 2.39. Too many targets and programs may inevitably lead to overlaps, lack of predictability and lower management efficiency. NTPs are complex and fragmented and funding allocations are unpredictable. Overlapping target programs create h"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p037:c04",
+          "score": -6.527308,
+          "page": 37,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "government spending. However, it remains an important driver of investment in society. Capital investment from the state budget accounted for 29.1 percent of total investment in the economy in the period 2011-15, slightly higher than the 28"
+        }
+      ]
+    },
+    {
+      "query_id": "t04",
+      "question": "What poverty rate at the US$3.2/day line is projected for Vietnam in 2018?",
+      "filter": {
+        "edition": "2018-06"
+      },
+      "latency_s": 1.0874,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2018-06:p032:c03",
+        "A:ts-2018-06:p010:c00",
+        "A:ts-2018-06:p027:c04"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2018-06:p032:c03",
+          "score": 5.843637,
+          "page": 32,
+          "edition": "2018-06",
+          "evidence_hit": true,
+          "text": "sumption that the responsiveness of the poverty rate to economic growth follows historical trends, the poverty rate-based on the lower middle-income poverty line of US$3.2/day-is projected to decline from about 10 percent in 2015 to 7.4 per"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2018-06:p010:c00",
+          "score": 0.504883,
+          "page": 10,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Medium-term outlook, risks, and policy implications Vietnam's medium-term outlook has improved further since the last Taking Stock release in December 2017. Real GDP is now projected to expand by 6.8 percent in 2018 (up from 6.5 percent in "
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2018-06:p027:c04",
+          "score": -0.781889,
+          "page": 27,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "tors, as well as services. Export growth is expected to be strongest in food, beverages and tobacco; clothing and leather; chemical, leather and plastic products; transport equipment; and machinery and other equipment. Imports are expected "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2018-06:p031:c04",
+          "score": -0.860311,
+          "page": 31,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "ain commodities will see a gradual reduction to zero percent by 2022. Source: WTO. Medium-Term Economic Outlook, Risks, Policy Implications 26. Vietnam's medium-term outlook has improved further since the last Taking Stock release in Decemb"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2018-06:p026:c05",
+          "score": -1.193567,
+          "page": 26,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rsed in recent months as U.S. dollar has shown tentative signs of a recovery. Meanwhile, the State Bank of Vietnam reported a record-high foreign reserves of about US$63 billion3 in the first four month of 2018, more than twice the nominal "
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2018-06:p031:c05",
+          "score": -1.337136,
+          "page": 31,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "from 6.5 percent in our previous projection) before moderating to 6.6 percent in 2019 and 6.5 percent in 2020. The slowdown in the outer years reflects the envisaged cyclical moderation of the global economy which is expected to dampen exte"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2018-06:p025:c02",
+          "score": -1.487125,
+          "page": 25,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "rofits and interest payments associated with Vietnam's dynamic, export oriented FDI sector have steadily grown to US$ 10.8 billion, equivalent to 4.9 percent of GDP in 2017, moving the overall income account into deficit and creating a grow"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2018-06:p016:c00",
+          "score": -1.598624,
+          "page": 16,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": "Recent Economic Developments in Vietnam Coming off strong momentum in 2017, growth accelerated further in the first quarter of 2018 4. Propelled by favorable domestic and external factors, Vietnam's economy posted its strongest first-quarte"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2018-06:p037:c04",
+          "score": -2.013968,
+          "page": 37,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " trade costs enormously. Undoubtedly, Vietnam will continue to deepen international integration and implement international commitments to achieve far-reaching goals on economic growth, structural adjustments, poverty reduction, and institu"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2018-06:p009:c08",
+          "score": -2.276071,
+          "page": 9,
+          "edition": "2018-06",
+          "evidence_hit": false,
+          "text": " and lowering the cost of domestic government bonds. Vietnam's dynamic economy continues to create jobs and real wage growth, leading to broad-bases welfare gains and poverty reduction. Job creation remains buoyant with over 670 thousand ne"
+        }
+      ]
+    },
+    {
+      "query_id": "t05",
+      "question": "What share of the overall public transport budget is spent on road transport?",
+      "filter": null,
+      "latency_s": 0.5646,
+      "first_hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "context_evidence": true,
+      "context_ids": [
+        "A:ts-2017-12:p040:c05",
+        "A:ts-2017-12:p040:c01",
+        "A:ts-2017-12:p046:c04"
+      ],
+      "context_chars": 1713,
+      "top10": [
+        {
+          "rank": 1,
+          "id": "A:ts-2017-12:p040:c05",
+          "score": 5.941346,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": true,
+          "text": "he transport sector, road transport represents approximately 89 percent of the overall public transport budget. There is relatively low spending on maritime, waterway and rail transport despite their transport costs per kilometer being cons"
+        },
+        {
+          "rank": 2,
+          "id": "A:ts-2017-12:p040:c01",
+          "score": 1.203513,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "the transport sector: it is recommended to re-allocate capital and recurrent expenditure in the annual and medium-term frameworks to increase road maintenance expenditure to between 20 and 25 percent of total road expenditure (i.e. double i"
+        },
+        {
+          "rank": 3,
+          "id": "A:ts-2017-12:p046:c04",
+          "score": 0.295083,
+          "page": 46,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " Malaysia Lao PDR Myanmar Singapore Indonesia New Zealand Philippines Australia Cambodia Korea Thailand Japan OECD average China Vietnam % of GDP % of GDP Private Public Total expenditure on pharmaceuticals as a share of GDP (2010) Source: "
+        },
+        {
+          "rank": 4,
+          "id": "A:ts-2017-12:p039:c04",
+          "score": 0.135332,
+          "page": 39,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ocated to transport infrastructure maintenance indicate otherwise, with a shortfall of at least 50 percent in the necessary O&M expenditure at both national and local levels. In 2012, maintenance expenditure represented only about 18 percen"
+        },
+        {
+          "rank": 5,
+          "id": "A:ts-2017-12:p040:c06",
+          "score": -1.732448,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "stliest form of domestic freight transport. Despite this high proportion of total transport investment, road transport costs are still high compared with the rest of the Southeast Asia region and expressway density is one of the lowest in t"
+        },
+        {
+          "rank": 6,
+          "id": "A:ts-2017-12:p039:c02",
+          "score": -3.603406,
+          "page": 39,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " in the transport sector. In the transport sector over-spending on capital and under-spending on maintenance at both national and provincial levels have long been a concern. Preserving a road in good condition is less costly than neglecting"
+        },
+        {
+          "rank": 7,
+          "id": "A:ts-2017-12:p047:c03",
+          "score": -4.372893,
+          "page": 47,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "rogress has been made in developing Vietnam's road network. The proportion of paved roads increased from 19 percent in 2004 to more than 50 percent in 2012 and paved road length increased by more than thirty percent in the period 2004-14. H"
+        },
+        {
+          "rank": 8,
+          "id": "A:ts-2017-12:p047:c04",
+          "score": -4.431498,
+          "page": 47,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " four times those of China, six times those of Thailand and three times those of India. Average road transport costs represented by trip time are the highest in the region after Indonesia and hold back Vietnam's competitiveness. This is bec"
+        },
+        {
+          "rank": 9,
+          "id": "A:ts-2017-12:p040:c04",
+          "score": -5.236533,
+          "page": 40,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": "ions to create better alignment with sectoral development strategies and a more optimal balance between the subsectors; that is, one more consistent with Vietnam's comparative advantages and changing development needs. In the past transport"
+        },
+        {
+          "rank": 10,
+          "id": "A:ts-2017-12:p041:c04",
+          "score": -5.828281,
+          "page": 41,
+          "edition": "2017-12",
+          "evidence_hit": false,
+          "text": " will be important to increase agricultural productivity and to promote agricultural diversification and exports. Sources: MOF . Waterways Maritime Aviation Railways Roads Other Figure 2.3: Public expenditure 2012 by mode of transport"
+        }
+      ]
+    }
+  ]
+}

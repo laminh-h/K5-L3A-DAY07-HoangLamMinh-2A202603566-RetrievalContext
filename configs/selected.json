@@ -5,5 +5,6 @@
   "baseline": "R1_dense",
   "selected": "R4_hybrid_rerank",
   "retrieval_rule": "Retrieval-only: highest dev Context Evidence Rate; tie -> Evidence Hit@3 -> MRR@10 -> fewer context chars. R3/R4/R6 tie at 14/15, 14/15; R4 and R6 tie on MRR 0.736; R4 uses fewer context chars. R4 is also the retriever inside A3.",
-  "frozen_at": "2026-11-14"
+  "frozen_at": "2026-11-14",
+  "test2_note": "test2 (t01-t05, u05-u06) was added after this file was committed in a24c576 and committed in 1027e9d before running; only the configs above are allowed on it."
 }

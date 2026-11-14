@@ -1,0 +1,38 @@
+[
+  {
+    "config": "R1_dense",
+    "method": "dense",
+    "use_filter": true,
+    "context_k": 3,
+    "budget_chars": 2400,
+    "neighbor_window": 0,
+    "hypothesis": "Baseline: Day 6 dense retrieval (MiniLM 384d, Chroma cosine) + user edition filter, top-3 as context.",
+    "N": 5,
+    "hit_at_1": "4/5",
+    "evidence_hit_at_3": "5/5",
+    "mrr_at_10": 0.9,
+    "recall_at_10": "5/5",
+    "context_evidence_rate": "5/5",
+    "avg_context_chars": 1702,
+    "retrieval_latency_ms_per_query": 107.4,
+    "cost_usd": 0.0
+  },
+  {
+    "config": "R4_hybrid_rerank",
+    "method": "hybrid+rerank",
+    "use_filter": true,
+    "context_k": 3,
+    "budget_chars": 2400,
+    "neighbor_window": 0,
+    "hypothesis": "A cross-encoder reading query and chunk jointly fixes ranking errors where the topic sentence outranks the chunk with the number (Day 6 q08, q20).",
+    "N": 5,
+    "hit_at_1": "5/5",
+    "evidence_hit_at_3": "5/5",
+    "mrr_at_10": 1.0,
+    "recall_at_10": "5/5",
+    "context_evidence_rate": "5/5",
+    "avg_context_chars": 1702,
+    "retrieval_latency_ms_per_query": 719.3,
+    "cost_usd": 0.0
+  }
+]

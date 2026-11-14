@@ -21,7 +21,8 @@ Mọi số liệu dưới đây lấy từ file kết quả do code sinh ra tron
 - **Agent model, cách chạy và phân chia dev/test:**
   - Model `gemini-3.5-flash-lite` (Gemini API, gói free), temperature 0, function calling `mode=ANY`. Gọi qua REST bằng `requests` ([day7/gemini.py](../../day7/gemini.py)); retry khi gặp 429/5xx; cách nhau tối thiểu 6,5 giây giữa các request.
   - Đổi model vì hai lý do: `gemini-2.5-flash` trả 404 ("no longer available to new users"); `gemini-3.8-flash` timeout 60–120 giây ngay cả với prompt "Say hi" khi chạy thử, còn `gemini-3.5-flash` trả 503 (quá tải).
-  - Split: **dev 15 câu có đáp án + 2 câu thiếu bằng chứng; test 5 + 2** ([data/questions.json](../../data/questions.json)), tổng 24 câu.
+  - Split: **dev 15 câu có đáp án + 2 câu thiếu bằng chứng; test 5 + 2** ([data/questions.json](../../data/questions.json)), tổng 24 câu theo yêu cầu.
+  - Thêm **test2 độc lập (5 + 2, t01–t05, u05–u06)**. Bộ này được viết **sau khi** cấu hình đã chốt và đã commit (`a24c576`), rồi commit riêng (`1027e9d`) **trước khi** chạy. Các trang gold của test2 không trùng với trang gold nào của dev/test. test2 chỉ chạy với cấu hình đã chốt, và đây là bộ dùng để đánh giá độc lập (xem giới hạn 8).
   - 20 câu có đáp án lấy từ benchmark Day 6, giữ nguyên split đã chốt ở Day 6. Day 6 không dùng test để chỉnh.
 
 - **Cách xác định câu có/thiếu evidence và tiêu chí chấm:**
@@ -47,6 +48,8 @@ Thời gian là ms mỗi query trên CPU, đo một lần, chưa gồm thời gi
 | R6 | R4 + chunk lân cận | Kết hợp hai cải thiện | dev | 8/15 | 14/15 | 14/15 (không đổi, 3774 ký tự) | 982 ms / 0 USD |
 | Cấu hình đã chọn R4 | như trên | chốt trước test | test | 3/5 | 4/5 | 4/5 (chặt); 5/5 khi chấm tay | 714 ms / 0 USD |
 | Baseline R1 | như trên | | test | 3/5 | 3/5 | 3/5 | 105 ms / 0 USD |
+| Cấu hình đã chọn R4 | như trên | đánh giá độc lập | **test2** | 5/5 | 5/5 | 5/5 | 719 ms / 0 USD |
+| Baseline R1 | như trên | | **test2** | 4/5 | 5/5 | 5/5 | 107 ms / 0 USD |
 
 Các metric phụ trên dev:
 
@@ -106,16 +109,18 @@ R3 là phương pháp mới và đồng thời là cải thiện so với baseli
 | A3 = A2 + step budget / dev | 17/17 | 1:5, 2:2, 3:2, 4:4, 5:2, 6:2 | 0 / 0 / 15 → **2,00** | 15/15 | 15/15 | 2/2 | 0/15 |
 | A1 dense (baseline) / test | 7/7 | 1:2, 2:1, 4:4 | 0 / 0 / 5 → **2,00** | 5/5 | 5/5 | 2/2 | 0/5 |
 | A3 (đã chọn) / test | 7/7 | 1:2, 2:3, 4:2 | 0 / 0 / 5 → **2,00** | 5/5 | 5/5 | 2/2 | 0/5 |
+| A1 dense (baseline) / **test2** | 7/7 | 1:3, 4:4 | 0 / 0 / 5 → **2,00** | 5/5 | 5/5 | 2/2 | 0/5 |
+| A3 (đã chọn) / **test2** | 7/7 | 1:2, 3:1, 4:2, 5:1, 6:1 | 0 / 0 / 5 → **2,00** | 5/5 | 5/5 | 2/2 | 0/5 |
 
 Số lượt search ở A2/A3 gồm cả lần gọi `get_adjacent_chunks`.
 
 Context Evidence Rate của agent, chấm tự động theo gold chặt (context gồm nhiều lượt search, nên có thể cao hơn Hit@3 của một lượt):
 
-| Cấu hình | dev | test |
+| Cấu hình | dev | test | test2 |
 |---|---|---|
-| A1 | 13/15 | 3/5 |
-| A2 | 15/15 | — |
-| A3 | 15/15 | 4/5 |
+| A1 | 13/15 | 3/5 | 5/5 |
+| A2 | 15/15 | — | — |
+| A3 | 15/15 | 4/5 | 5/5 |
 
 Thời gian, token và chi phí ước tính ([results/agent/](../../results/agent/)):
 
@@ -126,15 +131,19 @@ Thời gian, token và chi phí ước tính ([results/agent/](../../results/age
 | A3 / dev | 26,9 s | 86.792 / 3.030 | 0,034 USD | 2910 ký tự |
 | A1 / test | 24,4 s | 30.996 / 977 | 0,012 USD | 2639 ký tự |
 | A3 / test | 20,7 s | 25.493 / 965 | 0,010 USD | 2564 ký tự |
+| A1 / test2 | 23,5 s | 30.029 / 1.099 | 0,012 USD | 2639 ký tự |
+| A3 / test2 | 35,9 s | 40.548 / 1.245 | 0,015 USD | 2907 ký tự |
 
 Chi phí thực tế là 0 USD vì dùng gói free. Con số ước tính tính theo đơn giá giả định 0,30 / 2,50 USD mỗi 1M token vào/ra (khai báo trong `day7/gemini.py`), không phải bảng giá chính thức của `gemini-3.5-flash-lite`. Thời gian mỗi câu chủ yếu do giãn cách tối thiểu 6,5 giây giữa hai request (giới hạn tốc độ của gói free): trung bình khoảng 3,9 lần gọi LLM mỗi câu ở A1/dev, tức khoảng 25 giây. Vì vậy thời gian agent đo được phản ánh số lượt gọi nhiều hơn là tốc độ của model.
 
 **Chấm context thủ công trên test** (0 = không có evidence, 1 = thiếu điều kiện hoặc nguồn, 2 = đủ evidence và nguồn; [results/agent/test/context_labels.json](../../results/agent/test/context_labels.json)):
 
-| Cấu hình | Mức 2 | Mức 1 | Mức 0 |
+| Cấu hình (test / test2) | Mức 2 | Mức 1 | Mức 0 |
 |---|---|---|---|
-| A1 | 5/5 | 0 | 0 |
-| A3 | 5/5 | 0 | 0 |
+| A1 | 5/5 / 5/5 | 0 / 0 | 0 / 0 |
+| A3 | 5/5 / 5/5 | 0 / 0 | 0 / 0 |
+
+Nhãn context của test2 nằm trong [results/agent/test2/context_labels.json](../../results/agent/test2/context_labels.json). Ở test2, gold có mặt trong context ở mọi câu, nên kết quả chấm tay trùng với bộ đếm chặt.
 
 Bộ đếm chặt chỉ báo 3/5 cho A1 và 4/5 cho A3. Lý do là gold Day 6 của q19 và q20 chỉ ghi một trang (p28, p31), trong khi cùng con số còn xuất hiện ở **2018-06 p10**: bảng "Selected macroeconomic indicators" (cột 2017e: −4,5) và câu "Real GDP is now projected to expand by 6.8 percent in 2018". Ở q16 của A3, chunk được trích là c05 bị cắt ngay sau "from 51.8". Đây là sai lệch do **nhãn gold chưa đầy đủ**, không phải do agent. Mình không sửa gold sau khi đã xem test.
 
@@ -169,6 +178,11 @@ Bộ đếm chặt chỉ báo 3/5 cho A1 và 4/5 cho A3. Lý do là gold Day 6 c
     - Lúc đầu, sau khi hết lượt search model vẫn gọi search, và q08 kết thúc bằng `step_limit`. Sửa: khi đã hết lượt search, chỉ đưa cho model tool `submit_final`.
     - Thêm vào prompt chỉ dẫn "khi kết quả đã chứa đúng dữ kiện thì trả lời ngay, không search lại để xác nhận". Trước khi sửa, q01 tìm thấy đáp án ở lượt đầu nhưng vẫn search đủ 4 lượt.
   - **Kết quả test:** baseline A1 và A3 bằng nhau về chất lượng câu trả lời (đều 5/5 mức 2, abstention 2/2), nên **test không phân biệt được hai cấu hình**. A3 có retrieval tốt hơn (search đầu Hit@3 4/5 so với 2/5; Recall@10 5/5 so với 3/5) và ít lượt gọi hơn (trung bình 20,7 so với 24,4 giây). A1 bù cho retrieval yếu bằng cách search lại 4 lần ở 4/7 câu.
+  - **Kết quả test2 (độc lập):** A1 và A3 lại bằng nhau: 5/5 câu mức 2, citation 5/5, abstention 2/2, không từ chối nhầm, không lỗi.
+    - Retrieval: R4 có Hit@1 5/5 so với 4/5 của R1 (MRR 1,00 so với 0,90); Hit@3 bằng nhau 5/5.
+    - Lần này A3 **chậm và tốn hơn** A1: 35,9 so với 23,5 giây mỗi câu; 40,5k so với 30,0k token vào. Nguyên nhân là A3 gọi thêm `get_adjacent_chunks` hoặc search lại dù đã có evidence; ví dụ t02 có 6 lượt gọi tool.
+    - Câu u06 có bẫy: kỳ 2017-12 có số "10.5 million tourist entries" nhưng là số tháng 1–10/2017. Cả hai agent đều không dùng nhầm số này.
+    - Kết luận trung thực: trên hai bộ test, lợi thế của A3 chỉ thấy ở retrieval, không thấy ở câu trả lời. Ưu thế 2,00 so với 1,73 trên dev đến từ q08/q14 và chưa được xác nhận trên test. Câu hỏi test2 do em viết sau khi đọc đoạn nguồn, nên câu chữ gần với văn bản; điều này có lợi cho cả hai retriever (hiệu ứng trần), và test2 có thể dễ hơn dev.
   - **Đánh đổi:** A3 phải tải thêm cross-encoder và tốn khoảng 0,7 giây mỗi lần search trên CPU, nhưng ít vòng LLM hơn. Với gói free, giới hạn tốc độ request mới là chi phí thời gian chính.
   - **Giới hạn:**
     1. Test chỉ có 7 câu, mỗi câu tương đương 14–20 điểm phần trăm, nên không đủ để kết luận A3 tốt hơn A1 trên câu trả lời.
@@ -178,8 +192,9 @@ Bộ đếm chặt chỉ báo 3/5 cho A1 và 4/5 cho A3. Lý do là gold Day 6 c
     5. Câu hỏi bằng tiếng Anh, chưa thử tiếng Việt.
     6. A3 được thiết kế từ lỗi dev q13, nên điểm dev 2,00 của A3 là điểm đã chỉnh trên dev, không phải ước lượng độc lập.
     7. Prompt được chỉnh sau 3 câu dev chạy thử (q01, q08, u01).
-    8. **Nguy cơ rò rỉ test (tự khai):** test q16–q20 là test của Day 6, và kết quả test Day 6 đã được công bố trong báo cáo Day 6. Báo cáo đó phân tích lỗi q16, q19, q20 và đề xuất thử hybrid BM25. Khi thiết kế Day 7, em (và AI hỗ trợ) đã đọc báo cáo này, và giả thuyết của R4 trong `configs/retrieval.json` có nhắc "Day 6 q20". Không có tham số nào được chỉnh bằng điểm test của Day 7, và việc chọn cấu hình dựa trên dev theo `configs/selected.json`. Tuy vậy, hướng thử nghiệm (hybrid, rerank) có thể đã bị ảnh hưởng bởi lỗi test Day 6, nên kết quả test ở đây **không hoàn toàn độc lập**. Muốn đánh giá độc lập cần một bộ test mới, chưa ai nhìn thấy.
-    9. Repo chưa có commit trước khi chạy test, nên lịch sử git không chứng minh được thứ tự "chốt cấu hình, rồi mới chạy test". Thứ tự này chỉ được ghi trong `configs/selected.json` và trong log.
+    8. **Nguy cơ rò rỉ test (tự khai):** test q16–q20 là test của Day 6, và kết quả test Day 6 đã được công bố trong báo cáo Day 6. Báo cáo đó phân tích lỗi q16, q19, q20 và đề xuất thử hybrid BM25. Khi thiết kế Day 7, em (và AI hỗ trợ) đã đọc báo cáo này, và giả thuyết của R4 trong `configs/retrieval.json` có nhắc "Day 6 q20". Không có tham số nào được chỉnh bằng điểm test của Day 7, và việc chọn cấu hình dựa trên dev theo `configs/selected.json`. Tuy vậy, hướng thử nghiệm (hybrid, rerank) có thể đã bị ảnh hưởng bởi lỗi test Day 6, nên kết quả test ở đây **không hoàn toàn độc lập**. Để khắc phục, em đã tạo **test2** sau khi chốt cấu hình (commit `a24c576`, rồi `1027e9d` trước khi chạy). Kết quả test2 là đánh giá độc lập; kết quả test cũ được giữ để minh bạch.
+    9. Với test cũ, repo chưa có commit trước khi chạy, nên git không chứng minh được thứ tự "chốt cấu hình, rồi mới chạy test"; thứ tự này chỉ được ghi trong `configs/selected.json` và log. Với test2, thứ tự được ghi trong git: `a24c576` (cấu hình đã chốt), `1027e9d` (thêm câu hỏi test2), sau đó mới có kết quả.
+    10. test2 chỉ có 7 câu và do một người viết, nên vẫn nhỏ và có thể thiên về cách diễn đạt gần văn bản nguồn.
 
 ## Thử thách nâng cao (nếu thực hiện)
 
@@ -187,7 +202,7 @@ Không thực hiện.
 
 ## Sử dụng AI và cách kiểm tra
 
-Em dùng Claude Code để viết code (`day7/`), chạy thí nghiệm và soạn nháp nhãn. Các bước kiểm tra:
+Em dùng Claude Code để hỗ trợ viết code (`day7/`), chạy thí nghiệm và soạn nháp nhãn. Các bước kiểm tra:
 - Metric retrieval được tính tự động theo gold.
 - R1 khớp số Day 6, xác nhận kết nối đúng.
 - 23 unit test offline: `python -X utf8 -m unittest discover -s tests`.

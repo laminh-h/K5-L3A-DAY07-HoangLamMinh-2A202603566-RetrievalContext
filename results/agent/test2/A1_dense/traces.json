@@ -1,0 +1,754 @@
+[
+  {
+    "query_id": "t01",
+    "split": "test2",
+    "answerable": true,
+    "question": "In 2010, what share of total health spending in Vietnam went on medicines?",
+    "config": "A1_dense",
+    "status": "answered",
+    "answer": "In 2010, spending on medicines was 43 percent of total health spending in Vietnam.",
+    "citations": [
+      "A:ts-2017-12:p045:c08"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "medicines share total health spending 2010",
+        "filter": null,
+        "latency_s": 0.327,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p045:c08",
+            "score": 0.750054
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p046:c02",
+            "score": 0.648544
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p046:c00",
+            "score": 0.595378
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p045:c08"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p045:c08",
+      "A:ts-2017-12:p046:c02",
+      "A:ts-2017-12:p046:c00"
+    ],
+    "context_chars": 1656,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1432,
+    "tokens_out": 94,
+    "cost_usd": 0.000665,
+    "latency_s": 8.24,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "t02",
+    "split": "test2",
+    "answerable": true,
+    "question": "After the 2016 drought and salinity intrusion, how quickly did Vietnam's agriculture, forestry and fishery sector recover?",
+    "config": "A1_dense",
+    "status": "answered",
+    "answer": "Following the severe drought and salinity intrusion in early 2016 which caused growth to decline to the lowest level in a decade, Vietnam's agriculture, forestry, and fishery sector experienced a strong recovery, with growth returning remarkably to 2.9 percent in 2017 and continuing strongly at 4.1 percent in the first quarter of 2018 [A:ts-2018-06:p019:c03].",
+    "citations": [
+      "A:ts-2018-06:p019:c03"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "agriculture forestry fishery sector recover 2016 drought salinity intrusion",
+        "filter": null,
+        "latency_s": 0.03,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p019:c03",
+            "score": 0.64441
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p018:c00",
+            "score": 0.588996
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p010:c03",
+            "score": 0.46764
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "agriculture forestry fishery growth returned remarkably 2.9 percent 2017",
+        "filter": null,
+        "latency_s": 0.028,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p018:c00",
+            "score": 0.659585
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p019:c03",
+            "score": 0.649307
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p010:c03",
+            "score": 0.523538
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "agriculture forestry and fishery sector growth 2017 June 2018 edition",
+        "filter": null,
+        "latency_s": 0.029,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p018:c00",
+            "score": 0.653649
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p019:c03",
+            "score": 0.624923
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p020:c04",
+            "score": 0.59426
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "agriculture forestry fishery growth returned 2.9 percent in 2017",
+        "filter": null,
+        "latency_s": 0.029,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p018:c00",
+            "score": 0.650361
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p019:c03",
+            "score": 0.625583
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p010:c03",
+            "score": 0.507085
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p019:c03"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p019:c03",
+      "A:ts-2017-12:p018:c00",
+      "A:ts-2017-12:p010:c03",
+      "A:ts-2018-06:p020:c04"
+    ],
+    "context_chars": 2284,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 5590,
+    "tokens_out": 268,
+    "cost_usd": 0.002347,
+    "latency_s": 32.91,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "t03",
+    "split": "test2",
+    "answerable": true,
+    "question": "Besides central authorities, what shares of National Target Program funding came from local authorities and from community contributions?",
+    "config": "A1_dense",
+    "status": "answered",
+    "answer": "During the 2011-15 period, 26 percent of funding for all National Target Programs (NTPs) came from local authorities and 9 percent came from community contributions.",
+    "citations": [
+      "A:ts-2017-12:p049:c05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "National Target Program funding local authorities community contributions",
+        "filter": null,
+        "latency_s": 0.035,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p049:c05",
+            "score": 0.566034
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p049:c04",
+            "score": 0.560567
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p037:c07",
+            "score": 0.536833
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p049:c05"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p049:c05",
+      "A:ts-2017-12:p049:c04",
+      "A:ts-2017-12:p037:c07"
+    ],
+    "context_chars": 1438,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1424,
+    "tokens_out": 110,
+    "cost_usd": 0.000702,
+    "latency_s": 12.31,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "t04",
+    "split": "test2",
+    "answerable": true,
+    "question": "What poverty rate at the US$3.2/day line is projected for Vietnam in 2018?",
+    "config": "A1_dense",
+    "status": "answered",
+    "answer": "The poverty rate based on the US$3.2/day line is projected to be 7.4 percent in 2018.",
+    "citations": [
+      "A:ts-2018-06:p032:c03"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "poverty rate US$3.2/day projected 2018",
+        "filter": {
+          "edition": "2018-06"
+        },
+        "latency_s": 0.078,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p032:c03",
+            "score": 0.787162
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p010:c02",
+            "score": 0.514207
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p029:c02",
+            "score": 0.47595
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2018-06:p032:c03"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p032:c03",
+      "A:ts-2018-06:p010:c02",
+      "A:ts-2018-06:p029:c02"
+    ],
+    "context_chars": 1713,
+    "llm_calls": 2,
+    "searches": 1,
+    "tokens_in": 1672,
+    "tokens_out": 107,
+    "cost_usd": 0.000769,
+    "latency_s": 13.14,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "t05",
+    "split": "test2",
+    "answerable": true,
+    "question": "What share of the overall public transport budget is spent on road transport?",
+    "config": "A1_dense",
+    "status": "answered",
+    "answer": "Road transport represents approximately 89 percent of the overall public transport budget [A:ts-2017-12:p040:c05].",
+    "citations": [
+      "A:ts-2017-12:p040:c05"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "share of the overall public transport budget spent on road transport",
+        "filter": null,
+        "latency_s": 0.029,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p040:c05",
+            "score": 0.790863
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p040:c01",
+            "score": 0.721451
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p039:c04",
+            "score": 0.654921
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "road transport represents approximately 89 percent of the overall public transport budget",
+        "filter": null,
+        "latency_s": 0.034,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p040:c05",
+            "score": 0.7104
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p039:c04",
+            "score": 0.566556
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p040:c06",
+            "score": 0.565455
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "public transport budget road transport 2018",
+        "filter": null,
+        "latency_s": 0.042,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p040:c05",
+            "score": 0.706041
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p040:c01",
+            "score": 0.661647
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p040:c06",
+            "score": 0.589138
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "public transport budget road transport",
+        "filter": null,
+        "latency_s": 0.044,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p040:c05",
+            "score": 0.75198
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p040:c01",
+            "score": 0.657398
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p040:c06",
+            "score": 0.631849
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "answered",
+        "cited": [
+          "A:ts-2017-12:p040:c05"
+        ],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p040:c05",
+      "A:ts-2017-12:p040:c01",
+      "A:ts-2017-12:p039:c04",
+      "A:ts-2017-12:p040:c06"
+    ],
+    "context_chars": 2284,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 5408,
+    "tokens_out": 182,
+    "cost_usd": 0.002077,
+    "latency_s": 32.72,
+    "model": "gemini-3.5-flash-lite",
+    "auto": {
+      "context_evidence": true,
+      "first_search_hit_at_3": true,
+      "cited_evidence_chunk": true
+    }
+  },
+  {
+    "query_id": "u05",
+    "split": "test2",
+    "answerable": false,
+    "question": "What was the average lending interest rate charged by Vietnamese commercial banks in 2018?",
+    "config": "A1_dense",
+    "status": "abstain",
+    "answer": "The provided World Bank reports (\"Taking Stock\" December 2017 and June 2018) do not contain data on the average lending interest rate charged by Vietnamese commercial banks in 2018.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "average lending interest rate Vietnamese commercial banks 2018",
+        "filter": null,
+        "latency_s": 0.072,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p010:c04",
+            "score": 0.714886
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p021:c02",
+            "score": 0.713245
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p021:c00",
+            "score": 0.71071
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "lending interest rate 2018 commercial banks",
+        "filter": null,
+        "latency_s": 0.048,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p021:c01",
+            "score": 0.697407
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p022:c02",
+            "score": 0.668493
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p030:c02",
+            "score": 0.617742
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "lending rate percent commercial banks",
+        "filter": null,
+        "latency_s": 0.032,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p021:c01",
+            "score": 0.65598
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p022:c01",
+            "score": 0.60624
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2017-12:p022:c02",
+            "score": 0.598006
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "lending interest rate",
+        "filter": null,
+        "latency_s": 0.027,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p021:c01",
+            "score": 0.62326
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p022:c02",
+            "score": 0.617933
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p030:c02",
+            "score": 0.611806
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "insufficient_evidence",
+        "cited": [],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2017-12:p010:c04",
+      "A:ts-2018-06:p021:c02",
+      "A:ts-2018-06:p021:c00",
+      "A:ts-2018-06:p021:c01",
+      "A:ts-2017-12:p022:c02",
+      "A:ts-2018-06:p030:c02",
+      "A:ts-2018-06:p022:c01"
+    ],
+    "context_chars": 3997,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 6791,
+    "tokens_out": 165,
+    "cost_usd": 0.00245,
+    "latency_s": 33.23,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "query_id": "u06",
+    "split": "test2",
+    "answerable": false,
+    "question": "How many international tourist arrivals did Vietnam record in the first quarter of 2018?",
+    "config": "A1_dense",
+    "status": "abstain",
+    "answer": "The provided World Bank reports (\"Taking Stock\" December 2017 and June 2018) do not contain data on the number of international tourist arrivals recorded in Vietnam in the first quarter of 2018.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "international tourist arrivals first quarter 2018 Vietnam",
+        "filter": null,
+        "latency_s": 0.039,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2018-06:p054:c03",
+            "score": 0.553006
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p028:c00",
+            "score": 0.55158
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p017:c03",
+            "score": 0.536843
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "tourist arrivals first quarter 2018",
+        "filter": null,
+        "latency_s": 0.044,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p018:c01",
+            "score": 0.39967
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p027:c00",
+            "score": 0.310547
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p038:c04",
+            "score": 0.305534
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "tourist arrivals 2018",
+        "filter": null,
+        "latency_s": 0.027,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p018:c01",
+            "score": 0.34668
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2017-12:p052:c00",
+            "score": 0.312676
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p025:c01",
+            "score": 0.289789
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "tool": "search_documents",
+        "query": "arrivals Q1 2018",
+        "filter": null,
+        "latency_s": 0.027,
+        "budget_full": false,
+        "results": [
+          {
+            "rank": 1,
+            "id": "A:ts-2017-12:p042:c07",
+            "score": 0.413051
+          },
+          {
+            "rank": 2,
+            "id": "A:ts-2018-06:p055:c03",
+            "score": 0.320921
+          },
+          {
+            "rank": 3,
+            "id": "A:ts-2018-06:p027:c00",
+            "score": 0.306521
+          }
+        ]
+      },
+      {
+        "event": "final",
+        "status": "insufficient_evidence",
+        "cited": [],
+        "invalid_citations": []
+      }
+    ],
+    "context_ids": [
+      "A:ts-2018-06:p054:c03",
+      "A:ts-2017-12:p028:c00",
+      "A:ts-2018-06:p017:c03",
+      "A:ts-2017-12:p018:c01",
+      "A:ts-2018-06:p027:c00",
+      "A:ts-2018-06:p038:c04",
+      "A:ts-2017-12:p052:c00",
+      "A:ts-2018-06:p025:c01",
+      "A:ts-2017-12:p042:c07",
+      "A:ts-2018-06:p055:c03"
+    ],
+    "context_chars": 5098,
+    "llm_calls": 5,
+    "searches": 4,
+    "tokens_in": 7712,
+    "tokens_out": 173,
+    "cost_usd": 0.002746,
+    "latency_s": 31.67,
+    "model": "gemini-3.5-flash-lite"
+  }
+]
