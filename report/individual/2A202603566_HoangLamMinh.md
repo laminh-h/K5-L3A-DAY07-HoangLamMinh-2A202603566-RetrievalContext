@@ -2,7 +2,7 @@
 
 Hoàng Lam Minh · 2A202603566 · L3A · Ngày chạy: 14/11/2026
 
-Mọi số liệu dưới đây lấy từ file kết quả do code sinh ra trong [results/](../../results/). Nhãn chấm tay ghi rõ người chấm trong trường `labeller` (xem mục cuối về việc dùng AI).
+Mọi số liệu dưới đây lấy từ file kết quả trong [results/](../../results/). Nhãn chấm tay ghi rõ người chấm trong trường `labeller` (xem mục cuối về việc dùng AI).
 
 ## Dữ liệu và benchmark
 
