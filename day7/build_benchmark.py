@@ -30,6 +30,43 @@ UNANSWERABLE = [
 ]
 
 
+# Independent test set written 2026-11-14 AFTER configs/selected.json was frozen and committed
+# (commit a24c576). Pages were chosen so that none overlaps a dev/test gold page, and no Day 6 /
+# Day 7 run had looked at them as a target. Run only with the frozen configs.
+TEST2_ANSWERABLE = [
+    {"id": "t01", "type": "direct",
+     "question": "In 2010, what share of total health spending in Vietnam went on medicines?",
+     "expected_answer": "43 percent of total health spending (2.7 percent of GDP), well above the OECD averages of 16 percent and 2 percent.",
+     "gold": [{"source_id": "ts-2017-12", "page": 45, "evidence": "Spending on medicines in 2010 was 43 percent of total health spending or 2.7 percent of GDP"}]},
+    {"id": "t02", "type": "paraphrase",
+     "question": "After the 2016 drought and salinity intrusion, how quickly did Vietnam's agriculture, forestry and fishery sector recover?",
+     "expected_answer": "Growth returned to 2.9 percent in 2017 and reached 4.1 percent in the first quarter of 2018.",
+     "gold": [{"source_id": "ts-2018-06", "page": 19, "evidence": "Growth returned remarkably to 2.9 percent in 2017 and continued strongly at 4.1 percent in the first quarter 2018"}]},
+    {"id": "t03", "type": "condition_exception",
+     "question": "Besides central authorities, what shares of National Target Program funding came from local authorities and from community contributions?",
+     "expected_answer": "26 percent from local authorities and 9 percent from community contributions (central authorities about 56 percent; donors 5, borrowing 4).",
+     "gold": [{"source_id": "ts-2017-12", "page": 49, "evidence": "26 percent from local authorities; 5 percent from external donors; 4 percent from borrowing; and 9 percent from community contributions"}]},
+    {"id": "t04", "type": "metadata_filter", "filter": {"edition": "2018-06"},
+     "question": "What poverty rate at the US$3.2/day line is projected for Vietnam in 2018?",
+     "expected_answer": "About 7.4 percent in 2018, down from about 10 percent in 2015 (around 6 percent by 2020).",
+     "gold": [{"source_id": "ts-2018-06", "page": 32, "evidence": "projected to decline from about 10 percent in 2015 to 7.4 percent in 2018"}]},
+    {"id": "t05", "type": "direct",
+     "question": "What share of the overall public transport budget is spent on road transport?",
+     "expected_answer": "Approximately 89 percent.",
+     "gold": [{"source_id": "ts-2017-12", "page": 40, "evidence": "road transport represents approximately 89 percent of the overall public transport budget"}]},
+]
+TEST2_UNANSWERABLE = [
+    {"id": "u05", "split": "test2",
+     "question": "What was the average lending interest rate charged by Vietnamese commercial banks in 2018?",
+     "absence_reason": "Reports discuss credit growth, policy rates and interbank rates but give no average lending rate.",
+     "absence_check": "Regex 'lending' over all chunks: 1 match (2018-06 p21, lending volume +3.6% ytd); 'interest rate': 3 matches, none a lending-rate level."},
+    {"id": "u06", "split": "test2",
+     "question": "How many international tourist arrivals did Vietnam record in the first quarter of 2018?",
+     "absence_reason": "2018-06 p16 only says services were 'supported by a higher number of tourist arrivals' without a figure; the 10.5 million figure (2017-12 p18) is for Jan-Oct 2017.",
+     "absence_check": "Regex 'arrivals|entries|million (visitors|tourists|foreign)': 2 matches, 2017-12 p18 (Jan-Oct 2017) and 2018-06 p16 (no number)."},
+]
+
+
 def main() -> None:
     chunks = load_chunks()
     day6 = read_json(config.DAY6_ROOT / "benchmark" / "questions.json")["questions"]
@@ -48,7 +85,15 @@ def main() -> None:
         if q.get("filter"):
             rec["filter"] = q["filter"]
         out.append(rec)
-    for u in UNANSWERABLE:
+    for q in TEST2_ANSWERABLE:
+        for g in q["gold"]:
+            if not any(evidence_in(c, [g]) for c in chunks):
+                raise SystemExit(f"{q['id']}: gold not inside one chunk")
+        out.append({"id": q["id"], "split": "test2", "type": q["type"], "answerable": True,
+                    "expected_behavior": "search_and_answer", "question": q["question"],
+                    "expected_answer": q["expected_answer"], "gold": q["gold"],
+                    **({"filter": q["filter"]} if q.get("filter") else {})})
+    for u in UNANSWERABLE + TEST2_UNANSWERABLE:
         out.append({**u, "type": "unanswerable", "answerable": False, "expected_behavior": "search_and_abstain"})
     # sanity: unanswerable absence regexes really have no hits
     write_json(config.QUESTIONS_PATH, out)
@@ -56,7 +101,7 @@ def main() -> None:
     write_json(config.DATA / "benchmark_build_report.json", {"dropped_gold_alternatives": dropped,
                "counts": {s: {"answerable": sum(q["split"] == s and q["answerable"] for q in out),
                               "unanswerable": sum(q["split"] == s and not q["answerable"] for q in out)}
-                          for s in ("dev", "test")}})
+                          for s in ("dev", "test", "test2")}})
     print(f"{len(out)} questions; dropped {len(dropped)} gold alternatives not inside one chunk: {dropped}")
 
 

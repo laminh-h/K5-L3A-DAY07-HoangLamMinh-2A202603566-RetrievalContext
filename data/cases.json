@@ -100,6 +100,31 @@
     "answerable": true
   },
   {
+    "id": "t01",
+    "split": "test2",
+    "answerable": true
+  },
+  {
+    "id": "t02",
+    "split": "test2",
+    "answerable": true
+  },
+  {
+    "id": "t03",
+    "split": "test2",
+    "answerable": true
+  },
+  {
+    "id": "t04",
+    "split": "test2",
+    "answerable": true
+  },
+  {
+    "id": "t05",
+    "split": "test2",
+    "answerable": true
+  },
+  {
     "id": "u01",
     "split": "dev",
     "answerable": false
@@ -117,6 +142,16 @@
   {
     "id": "u04",
     "split": "test",
+    "answerable": false
+  },
+  {
+    "id": "u05",
+    "split": "test2",
+    "answerable": false
+  },
+  {
+    "id": "u06",
+    "split": "test2",
     "answerable": false
   }
 ]

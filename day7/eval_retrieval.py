@@ -54,12 +54,12 @@ def run_config(name: str, cfg: dict, questions: list[dict], chunks: list[dict], 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", choices=["dev", "test"], default="dev")
+    ap.add_argument("--split", choices=["dev", "test", "test2"], default="dev")
     ap.add_argument("--file", type=Path, default=config.ROOT / "configs" / "retrieval.json")
     ap.add_argument("--configs", nargs="*")
     args = ap.parse_args()
     cfgs = read_json(args.file)["configs"]
-    if args.split == "test":
+    if args.split in ("test", "test2"):
         selected = read_json(config.ROOT / "configs" / "selected.json")
         allowed = {selected["baseline"], selected["selected"]}
         names = args.configs or sorted(allowed)

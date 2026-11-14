@@ -8,6 +8,10 @@
     "test": {
       "answerable": 5,
       "unanswerable": 2
+    },
+    "test2": {
+      "answerable": 5,
+      "unanswerable": 2
     }
   }
 }

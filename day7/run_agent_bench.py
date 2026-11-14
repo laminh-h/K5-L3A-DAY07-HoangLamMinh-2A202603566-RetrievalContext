@@ -18,11 +18,11 @@ from .retrievers import build
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", required=True)
-    ap.add_argument("--split", choices=["dev", "test"], default="dev")
+    ap.add_argument("--split", choices=["dev", "test", "test2"], default="dev")
     ap.add_argument("--ids", nargs="*")
     args = ap.parse_args()
     cfg = read_json(config.ROOT / "configs" / "agent.json")["configs"][args.config]
-    if args.split == "test":
+    if args.split in ("test", "test2"):
         sel = read_json(config.ROOT / "configs" / "selected.json")
         if args.config not in (sel["agent_baseline"], sel["agent_selected"]):
             raise SystemExit("test chỉ chạy agent config đã chốt trong configs/selected.json")
